@@ -1,7 +1,6 @@
 // default imports (were set up by create-react-app)
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // custom imports

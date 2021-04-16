@@ -6,7 +6,17 @@ const GlobalStyles = createGlobalStyle`
   * {
     border: none;
     margin: 0;
+    outline: none;
     padding: 0;
+    text-decoration: none;
+  }
+
+  body {
+    font-family: Montserrat;
+  }
+
+  img {
+    display: block;
   }
 `;
 

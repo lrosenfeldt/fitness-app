@@ -1,12 +1,8 @@
-import ExampleButton from "./components/ExampleButton";
+import Dashboard from 'components/dashboard/Dashboard';
 
 function App() {
   return (
-    <div>
-      <h1>Hello!</h1>
-      <p>Ich bin ein Beispieltext!</p>
-      <ExampleButton />
-    </div>
+    <Dashboard userName={"Name"}/>
   );
 }
 

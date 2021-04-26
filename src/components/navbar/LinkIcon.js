@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import iconHome from 'images/icon_home.png';
 import iconBrowse from 'images/icon_browse.png';
 import iconProfile from 'images/icon_profile.png';
+import { Link } from 'react-router-dom';
 
 const StyledImg = styled.img`
   height: 100%;
@@ -12,11 +13,9 @@ const StyledImg = styled.img`
 
 const StyledCaption = styled.figcaption`
   ${({ theme }) => theme.link};
-  ${(props) => props.theme.link};
   margin-top: 5px;
   text-align: center;
 `;
-
 
 const LinkFigure = (props) => {
   return (

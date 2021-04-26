@@ -1,7 +1,11 @@
 import { css } from 'styled-components';
 
 const Theme = {
-  fontSize: 14,
+  fontSize: {
+    h1: 36,
+    h2: 28,
+    text: 14,
+  },
   colors: {
     blue: '#1D2A73',
     pink: '#F5EBDD',

@@ -5,6 +5,7 @@ const StyledNav = styled.nav`
   align-items: flex-end;
   background-color: ${({ theme }) => theme.colors.pink};
   bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

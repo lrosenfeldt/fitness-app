@@ -3,7 +3,7 @@ import LinkIcon from './LinkIcon';
 
 const StyledNav = styled.nav`
   align-items: flex-end;
-  background-color: ${({ theme }) => theme.colors.pink};
+  background-color: ${({ theme }) => theme.color.pink};
   bottom: 0;
   left: 0;
   display: flex;
@@ -17,9 +17,9 @@ const StyledNav = styled.nav`
 const Navbar = (props) => {
   return (
     <StyledNav>
-      <LinkIcon>home</LinkIcon>
-      <LinkIcon>browse</LinkIcon>
-      <LinkIcon>profil</LinkIcon>
+      <LinkIcon variant="home"></LinkIcon>
+      <LinkIcon variant="browse"></LinkIcon>
+      <LinkIcon variant="profile"></LinkIcon>
     </StyledNav>
   )
 }

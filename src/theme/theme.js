@@ -1,46 +1,34 @@
-import { css } from 'styled-components';
-
 const Theme = {
-  fontSize: 14,
-  colors: {
-    blue: '#1D2A73',
-    pink: '#F5EBDD',
-    lightBlue: '3EC1F3',
-  },
-  h1: css`
-    color: ${({ theme }) => theme.colors.blue};
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 43.88px
-  `,
-  h2: css`
-    color: ${({ theme }) => theme.colors.blue};
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 29.26px
-  `,
-  text: css`
-    color: ${({ theme }) => theme.colors.blue};
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 21px
-  `,
-  smallText: css`
-    ${({ theme }) => theme.text};
-    font-size: 12px; 
-    line-height: 15px;
-  `,
-  link: css`
-    ${({ theme }) => theme.text};
-    font-family: Roboto;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    line-height: 11.72px;
-    text-transform: uppercase;
-  `,
+  color: {
+        beige: '#F5EBDD',
+        green: '#D2DDD0',
+        lightBlue: '#3EC1F3',
+        lightPink: '#EDD4D0',
+        navy: '#1D2A73',
+    },
+
+    fontSize: {
+        h1: '36px',
+        h2: '24px',
+        h3: '18px',
+        text: '16px',
+        small: '12px',
+        navLink: '10px',
+    },
+
+    fontWeight: {
+        bold: '700',
+        normal: '400'
+    },
+
+    lineHeight: {
+        h1: '43.88px',
+        h2: '29.26px',
+        h3: '21.94px',
+        text: '21px',
+        textSmall: '15px',
+        navLink: '12.19px',
+    },
  };
 
 export default Theme;

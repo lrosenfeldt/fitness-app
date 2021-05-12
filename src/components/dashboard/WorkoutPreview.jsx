@@ -7,11 +7,6 @@ const StyledFigure = styled.figure`
   margin: 10px 0;
 `;
 
-const StyledImg = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
 const StyledFigcaption = styled(P)`
   &:after {
     content: "XXX kcal · 26 Min. · Beweglichkeit";

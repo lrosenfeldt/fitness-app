@@ -3,23 +3,24 @@ import LinkIcon from './LinkIcon';
 
 const StyledNav = styled.nav`
   align-items: flex-end;
-  background-color: ${({ theme }) => theme.color.pink};
+  background-color: ${({ theme }) => theme.color.beige};
   bottom: 0;
-  left: 0;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: absolute;
+  height: ${({ theme }) => theme.navHeight};
+  justify-content: space-between;
+  left: 0;
+  padding: 8px 40px 2px 40px;
+  position: fixed;
   width: 100vw;
-  margin-top: 10px;
 `;
 
 const Navbar = (props) => {
   return (
     <StyledNav>
-      <LinkIcon variant="home"></LinkIcon>
-      <LinkIcon variant="browse"></LinkIcon>
-      <LinkIcon variant="profile"></LinkIcon>
+        <LinkIcon type="home"></LinkIcon>
+        <LinkIcon type="browse"></LinkIcon>
+        <LinkIcon type="profile"></LinkIcon>
     </StyledNav>
   )
 }

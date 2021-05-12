@@ -1,27 +1,49 @@
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useState } from 'react';
-import { H1, PageWrapper } from 'components/base/base';
-import Navbar from 'components/navbar/Navbar';
+import { H1, SectionWrapper } from 'components/base/base';
 import WorkoutPreview from 'components/dashboard/WorkoutPreview';
+// WIP
+
 
 const StyledH1 = styled(H1)`
-  margin-top: 71px;
-  margin-bottom: 53px;
+  padding-top: 71px;
+  padding-bottom: 53px;
   max-width: 275px;
 `;
 
 
 const Dashboard = (props) => {
-  const greeting = () => {
-    return "Guten Morgen"
-  };
+  const generateGreeting = (date) => {
+    const hours = date.getHours();
+    if (hours < 12) {
+      return `Guten Morgen, ${props.userName}`;
+    } else if (hours < 17) {
+      return `Guten Tag, ${props.userName}`;
+    }
+    return `Guten Abend, ${props.userName}`;
+  }
+
+  let date = new Date();
+
+  const [greeting, setGreeting] = useState(generateGreeting(date));
+
+  const greetingIntervalId = setInterval(() => {
+    date = new Date();
+    setGreeting(generateGreeting(date));
+  }, 1000);
+
+  useEffect(() => {
+    return () => {
+      clearInterval(greetingIntervalId);
+    }
+  });
+
 
   return (
-    <PageWrapper>
-      <Navbar />
-      <StyledH1>{`${greeting()}, ${props.userName}`}</StyledH1>
+    <SectionWrapper>
+      <StyledH1>{greeting}</StyledH1>
       <WorkoutPreview />
-    </PageWrapper>
+    </SectionWrapper>
   )
 }
 

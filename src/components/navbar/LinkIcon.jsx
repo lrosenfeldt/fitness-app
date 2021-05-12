@@ -2,48 +2,55 @@ import styled from 'styled-components';
 import iconHome from 'assets/images/icon_home.png';
 import iconBrowse from 'assets/images/icon_browse.png';
 import iconProfile from 'assets/images/icon_profile.png';
-import { NavLink } from 'react-router-dom';
-import { Img, P } from 'components/base/base';
+import { Img, NavLink } from 'components/base/base';
+
+const StyledFigure = styled.figure`
+`;
 
 const StyledImg = styled(Img)`
   margin-left: auto;
   margin-right: auto;
 `;
 
-const StyledFigcaption = styled(P)`
-  margin-top: 5px;
+const StyledFigcaption = styled(NavLink)`
+  padding-top: 2.5px;
   text-align: center;
 `;
 
 
 const LinkFigure = (props) => {
   return (
-  <figure>
-    <StyledImg src={props.src} alt=""/>
-    <StyledFigcaption as="figcaption" lang={props.lang}>{props.children}</StyledFigcaption>
-  </figure>);
+    <StyledFigure>
+      <StyledImg portrait src={props.src} alt=""/>
+      <StyledFigcaption as="figcaption" lang={props.lang}>{props.children}</StyledFigcaption>
+    </StyledFigure>
+  )
 }
 
 const LinkIcon = (props) => {
-  let linkFigure = null;
-
-  if (props.variant === "home") {
+  if (props.type === "home") {
     return (
-      <NavLink to="/">
-        <LinkFigure src={iconHome} lang="en">Home</LinkFigure>
-      </NavLink>
+      <div>
+        <NavLink to="/">
+          <LinkFigure src={iconHome} lang="en">Home</LinkFigure>
+        </NavLink>
+      </div>
     )
-  } else if (props.variant === "browse") {
+  } else if (props.type === "browse") {
     return (
-      <NavLink to="/browse">
-        <LinkFigure src={iconBrowse} lang="en">Browse</LinkFigure>
-      </NavLink>
+      <div>
+        <NavLink to="/browse">
+          <LinkFigure src={iconBrowse} lang="en">Browse</LinkFigure>
+        </NavLink>
+      </div>
     )
-  } else if (props.variant === "profil") {
+  } else if (props.type === "profile") {
     return (
-    <NavLink to="/">
-      <LinkFigure src={iconProfile} lang="de">Profil</LinkFigure>
-    </NavLink>
+    <div>
+      <NavLink to="/profile">
+        <LinkFigure src={iconProfile} lang="de">Profil</LinkFigure>
+      </NavLink>
+    </div>
     )
   }
 

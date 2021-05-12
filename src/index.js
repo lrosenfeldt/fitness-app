@@ -8,13 +8,17 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './theme/globalStyles';
 import Theme from './theme/theme';
+import ApolloProvider from 'components/base/apolloProvider/ApolloProvider';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <BrowserRouter>
+      <ApolloProvider>
         <App />
+      </ApolloProvider>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,

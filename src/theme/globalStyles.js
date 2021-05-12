@@ -50,6 +50,10 @@ const GlobalStyles = createGlobalStyle`
   img {
     display: block;
   }
+
+  button {
+    background-color: transparent;
+  }
 `;
 
 export default GlobalStyles;

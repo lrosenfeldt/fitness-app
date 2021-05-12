@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { NavLink as UnstyledNavLink } from 'react-router-dom';
 
 export const H1 = styled.h1`
   color: ${({ theme }) => theme.color.navy};
@@ -37,14 +38,35 @@ export const P = styled.p`
     `}
 `;
 
+export const NavLink = styled(UnstyledNavLink)`
+  color: ${({ theme }) => theme.color.navy};
+  font-size: ${({ theme }) => theme.fontSize.navLink};
+  font-weight: ${({ theme }) => theme.fontWeight.navLink};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.navLink};
+  line-height: ${({ theme }) => theme.lineHeight.navLink};
+  text-transform: uppercase;
+`;
+
 export const Img = styled.img`
-  width: 100%;
-  height: auto;
+  height: ${(props) => props.portrait ? "100%" : "auto"};
+  width: ${(props) => props.portrait ? "auto" : "100%"};
 `;
 
 export const PageWrapper = styled.div`
+  --navHeight: ${({ theme }) => theme.navHeight};
   box-sizing: border-box;
-  height: 100vh;
-  padding: 0 17px;
+  margin-bottom: calc(var(--navHeight) + 20px);
+  position: relative;
   width: 100vw;
+`;
+
+export const SectionWrapper = styled.section`
+  padding: 0 17px;
+`;
+
+export const Dot = styled.div`
+  background-color: ${(props) => props.color || props.theme.color.navy};
+  border-radius: 50%;
+  height: ${(props) => props.size || props.theme.fontSize.small};
+  width: ${(props) => props.size || props.theme.fontSize.small};
 `;

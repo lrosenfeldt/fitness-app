@@ -1,9 +1,10 @@
+import { css } from 'styled-components';
 const Theme = {
   color: {
         beige: '#F5EBDD',
         green: '#D2DDD0',
         lightBlue: '#3EC1F3',
-        lightPink: '#EDD4D0',
+        pink: '#FFB7D5',
         navy: '#1D2A73',
     },
 
@@ -21,6 +22,16 @@ const Theme = {
         normal: '400'
     },
 
+    gradient: {
+        yellowToPink: css`
+            background: linear-gradient(261.83deg, #FFB7D5 22.27%, rgba(255, 255, 255, 0) 89.6%), #FFBE21;
+        `,
+    },
+
+    letterSpacing: {
+        navLink: 0.2
+    },
+
     lineHeight: {
         h1: '43.88px',
         h2: '29.26px',
@@ -29,6 +40,8 @@ const Theme = {
         textSmall: '15px',
         navLink: '12.19px',
     },
+
+    navHeight: "50px",
  };
 
 export default Theme;

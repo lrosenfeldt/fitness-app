@@ -7,6 +7,7 @@ const StyledDiv = styled.div`
   flex-wrap: nowrap;
 `;
 
+
 const StyledDot = styled(Dot)`
   margin-right: ${({ theme }) => theme.fontSize.small};
 `;
@@ -15,8 +16,8 @@ const PieChartLabels = (props) => {
   return (
     <div>
       {
-        props.data.map((dataset) => 
-          <StyledDiv>
+        props.data.map((dataset, index) => 
+          <StyledDiv key={index}>
             <StyledDot color={dataset.color} />
             <P small>{dataset.title}</P>
           </StyledDiv> 

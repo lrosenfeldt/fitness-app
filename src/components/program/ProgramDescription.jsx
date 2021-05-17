@@ -15,6 +15,7 @@ const StyledDiv = styled.div`
 `;
 
 const ProgramDescription = (props) => {
+  console.log(props.match);
   return (
     <StyledSection>
       <StyledDiv>

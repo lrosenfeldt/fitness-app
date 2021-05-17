@@ -5,6 +5,7 @@ import Dashboard from 'components/dashboard/Dashboard.jsx';
 import Browse from 'components/browse/Browse.jsx';
 import Program from 'components/program/Program.jsx';
 
+
 function App() {
   return (
     <PageWrapper>
@@ -29,5 +30,6 @@ function App() {
     </PageWrapper>
   );
 }
+
 
 export default App;

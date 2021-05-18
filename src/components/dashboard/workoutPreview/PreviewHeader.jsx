@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { H2, P } from 'components/base/base';
 
 const PreviewHeaderWrapper = styled.div`
   align-items: center;
@@ -6,19 +7,11 @@ const PreviewHeaderWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const StyledH2 = styled.h2`
-  ${({ theme }) => theme.h2};
-`;
-
-const PlanLabel = styled.p`
-  ${({ theme }) => theme.smallText};
-`;
-
 const PreviewHeader = () => {
   return (
     <PreviewHeaderWrapper>
-      <StyledH2>Dein Workout heute</StyledH2>
-      <PlanLabel>Trainingsplan</PlanLabel>
+      <H2>Dein Workout heute</H2>
+      <P small>Trainingsplan</P>
     </PreviewHeaderWrapper>
   )
 }

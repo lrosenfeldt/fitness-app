@@ -2,17 +2,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 // custom imports
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './theme/globalStyles';
 import Theme from './theme/theme';
+import ApolloProvider from 'components/base/apolloProvider/ApolloProvider';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
-      <App />
+      <BrowserRouter>
+      <ApolloProvider>
+        <App />
+      </ApolloProvider>
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

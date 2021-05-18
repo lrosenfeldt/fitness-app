@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { P, Img } from 'components/base/base';
-import PreviewHeader from './PreviewHeader';
+import PreviewHeader from '../previewHeader/PreviewHeader';
 
 
 const StyledImg = styled(Img)`
@@ -8,11 +8,12 @@ const StyledImg = styled(Img)`
 `;
 
 
-const WorkoutPreview = (props) => {
+
+const WorkoutPreviewCard = (props) => {
   return (
     <div>
       <PreviewHeader />
-      <StyledImg src={props.imageSource} />
+      {props.imageSource && <StyledImg src={props.imageSource} />};
       <P>{props.title || "Titel des Workouts"}</P>
       <P>{props.programTitle || "Titel des Programms"}</P>
       <P small>
@@ -22,4 +23,4 @@ const WorkoutPreview = (props) => {
   );
 };
 
-export default WorkoutPreview;
+export default WorkoutPreviewCard;

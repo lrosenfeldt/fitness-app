@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+
 const Theme = {
   color: {
         beige: '#F5EBDD',

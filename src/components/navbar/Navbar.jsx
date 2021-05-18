@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LinkIcon from './LinkIcon';
+import LinkIcon from './LinkIcon/LinkIcon';
 
 const StyledNav = styled.nav`
   align-items: flex-end;

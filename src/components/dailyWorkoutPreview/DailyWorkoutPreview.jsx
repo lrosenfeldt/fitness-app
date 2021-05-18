@@ -1,7 +1,7 @@
 import { useQuery, gql } from '@apollo/client';
 import { P } from 'components/base/base';
 import Spinner from 'components/base/spinner/Spinner';
-import WorkoutPreview from './WorkoutPreview';
+import WorkoutPreviewCard from './workoutPreviewCard/WorkoutPreviewCard';
 
 const GET_WORKOUT_BY_ID = gql`
   query($id: ID!) {
@@ -36,23 +36,23 @@ const translateCategories = (categories) => {
 }
 
 
-const QueryWorkoutPreview = (props) => {
+const DailyWorkoutPreview = ({ id }) => {
   const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, { variables: {
-    id: "1a985d3f-73d5-414c-abac-bee46d5a6a32"
+    id: id,
   }});
 
   if (loading) return <Spinner />
   if (error) return <P>Fehler! Workout nicht gefunden!</P>
 
   return (
-    <WorkoutPreview
-      imageSource={data.Workout.image.asset.url}
+    <WorkoutPreviewCard
+      imageSource={data.Workout.image && data.Workout.image.asset.url}
       title={data.Workout.title}
       calories={data.Workout.calories}
       duration={data.Workout.duration}
-      categories={translateCategories(data.Workout.categories)}
+      categories={data.Workout.categories && translateCategories(data.Workout.categories)}
     />
   )
 }
 
-export default QueryWorkoutPreview;
+export default DailyWorkoutPreview;

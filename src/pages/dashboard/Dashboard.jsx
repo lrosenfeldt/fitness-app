@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { H1, SectionWrapper } from 'components/base/base';
-import QueryWorkoutPreview from 'components/dashboard/workoutPreview/QueryWorkoutPreview';
+import DailyWorkoutPreview from 'components/dailyWorkoutPreview/DailyWorkoutPreview';
 
 const StyledH1 = styled(H1)`
   padding-top: 71px;
@@ -40,7 +40,7 @@ const Dashboard = (props) => {
   return (
     <SectionWrapper>
       <StyledH1>{greeting}</StyledH1>
-      <QueryWorkoutPreview />
+      <DailyWorkoutPreview id={id}/>
     </SectionWrapper>
   )
 }

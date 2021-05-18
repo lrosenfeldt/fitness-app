@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import favIcon from 'assets/images/icon_fav.svg';
 import favIconFilled from 'assets/images/icon_fav-filled.svg';
 
+
 const StyledButton = styled.button`
   ${({ filled }) => {
     if (filled) {
@@ -18,6 +19,7 @@ const StyledButton = styled.button`
   }}
   background-position: center;
   background-repeat: no-repeat;
+  background-size: auto 20px;
   grid-area: fav;
   height: 20px;
   transition: all 0.15s ease-in-out;

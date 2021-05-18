@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { H3, SectionWrapper } from 'components/base/base';
-import PieChart from 'components/program/programChart/pieChart/PieChart';
+import PieChart from './pieChart/PieChart';
 
 const StyledH3 = styled(H3)`
   margin-bottom: 40px;

@@ -53,11 +53,17 @@ export const Img = styled.img`
 `;
 
 export const PageWrapper = styled.div`
-  --navHeight: ${({ theme }) => theme.navHeight};
   box-sizing: border-box;
-  margin-bottom: calc(var(--navHeight) + 20px);
   position: relative;
   width: 100vw;
+
+  ${({ noNav }) => 
+    !noNav &&
+    css`
+      --navHeight: ${({ theme }) => theme.navHeight};
+      margin-bottom: calc(var(--navHeight) + 20px);
+    `
+  };
 `;
 
 export const SectionWrapper = styled.section`

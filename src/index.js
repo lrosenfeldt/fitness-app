@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 // custom imports
 import { ThemeProvider } from 'styled-components';
-import GlobalStyles from './theme/globalStyles';
-import Theme from './theme/theme';
+import GlobalStyles from './theme/GlobalStyles';
+import Theme from './theme/Theme';
 import ApolloProvider from 'components/base/apolloProvider/ApolloProvider';
 
 

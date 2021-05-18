@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Tag from './Tag';
+import Tag from './tag/Tag';
 
 const StyledDiv = styled.div`
   align-items: center;
@@ -17,7 +17,7 @@ const TagBox = (props) => {
   return (
     <StyledDiv>
       {
-        dummyData.map((tag) => <Tag>{tag}</Tag>)
+        dummyData.map((tag, index) => <Tag key={index}>{tag}</Tag>)
       }
     </StyledDiv>
   )

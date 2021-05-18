@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { H2, P } from 'components/base/base';
-import FavButton from 'components/browse/workoutPreview/FavButton';
+// import FavButton from './favButton/FavButton';
+import FavButton from './favButton/FavButton';
+
 
 const StyledDiv = styled.div`
   background-color: ${(props) => {
@@ -38,7 +40,7 @@ const StyledP = styled(P).attrs({
   grid-area: newTag;
 `;
 
-const WorkoutPreview = (props) => {
+const WorkoutCard = (props) => {
   return (
     <StyledDiv highlighted={props.highlighted}>
       <FavButton isFav={props.isFav}/>
@@ -50,4 +52,4 @@ const WorkoutPreview = (props) => {
   )
 };
 
-export default WorkoutPreview;
+export default WorkoutCard;

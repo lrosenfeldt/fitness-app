@@ -1,9 +1,9 @@
 import { Route, Redirect } from 'react-router-dom';
 import { PageWrapper } from 'components/base/base';
 import Navbar from 'components/navbar/Navbar';
-import Dashboard from 'components/dashboard/Dashboard.jsx';
-import Browse from 'components/browse/Browse.jsx';
-import Program from 'components/program/Program.jsx';
+import Dashboard from 'pages/dashboard/Dashboard.jsx';
+import Browse from 'pages/browse/Browse.jsx';
+import Program from 'pages/program/Program.jsx';
 
 
 function App() {

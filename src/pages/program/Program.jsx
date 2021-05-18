@@ -1,6 +1,6 @@
-import ProgramChart from './programChart/ProgramChart';
-import ProgramDescription from './ProgramDescription';
-import ProgramHeader from './programHeader/ProgramHeader';
+import ProgramChart from 'components/programChart/ProgramChart';
+import ProgramDescription from 'components/programDescription/ProgramDescription';
+import ProgramHeader from 'components/programHeader/ProgramHeader';
 
 const Program = () => {
   return (

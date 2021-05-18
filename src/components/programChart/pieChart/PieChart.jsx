@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PieChartLabels from './PieChartLabels';
+import PieChartLabels from './pieChartLabels/PieChartLabels';
 import { PieChart as PieChartMinimal} from 'react-minimal-pie-chart';
 
 const StyledDiv = styled.div`

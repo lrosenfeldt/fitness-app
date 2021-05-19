@@ -23,7 +23,7 @@ const GET_WORKOUT_BY_ID = gql`
 
 const category = {
   strength: "Kraft",
-}
+};
 
 const translateCategories = (categories) => {
   const translatedArray = categories.map((key) => {

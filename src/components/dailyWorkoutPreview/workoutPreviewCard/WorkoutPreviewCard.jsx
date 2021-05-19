@@ -13,7 +13,7 @@ const WorkoutPreviewCard = (props) => {
   return (
     <div>
       <PreviewHeader />
-      {props.imageSource && <StyledImg src={props.imageSource} />};
+      {props.imageSource && <StyledImg src={props.imageSource} />}
       <P>{props.title || "Titel des Workouts"}</P>
       <P>{props.programTitle || "Titel des Programms"}</P>
       <P small>

@@ -17,7 +17,12 @@ const WorkoutBrowser = (props) => {
     <div>
       {
         data.allProgram.map((program) => (
-        <WorkoutCard isNew key={program._id}>{program.title}</WorkoutCard>
+        <WorkoutCard
+          isNew
+          id={program._id}
+          title={program.title}
+          key={program._id}
+        />
         ))
       }
     </div>

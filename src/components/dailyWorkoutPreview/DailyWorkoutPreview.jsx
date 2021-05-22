@@ -1,24 +1,8 @@
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { P } from 'components/base/base';
 import Spinner from 'components/base/spinner/Spinner';
 import WorkoutPreviewCard from './workoutPreviewCard/WorkoutPreviewCard';
-
-const GET_WORKOUT_BY_ID = gql`
-  query($id: ID!) {
-      Workout(id: $id) {
-        title
-        calories
-        duration
-        categories
-        image {
-          asset {
-            url
-            altText
-          }
-        }
-      }
-  }
-`;
+import { GET_WORKOUT_BY_ID } from 'queries/index';
 
 
 const category = {

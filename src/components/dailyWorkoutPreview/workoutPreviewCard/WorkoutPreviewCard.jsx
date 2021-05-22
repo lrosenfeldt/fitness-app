@@ -17,7 +17,7 @@ const WorkoutPreviewCard = (props) => {
       <P>{props.title || "Titel des Workouts"}</P>
       <P>{props.programTitle || "Titel des Programms"}</P>
       <P small>
-        {props.calories || "XXX"} kcal · {props.duration || "-" } Min. · {props.categories || "-"}
+        {props.calories || "XXX"} kcal · {props.duration ? props.duration + " Min." : "So schnell du kannst!"} · {props.categories}
       </P>
     </div>
   );

@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { H1, H2, P } from 'components/base/base';
+import { H1, H2 } from 'components/base/base';
 import { LinkButton } from 'components/base/button/Button';
 
 

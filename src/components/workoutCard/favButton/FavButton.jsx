@@ -1,20 +1,36 @@
 import { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import favIcon from 'assets/images/icon_fav.svg';
 import favIconFilled from 'assets/images/icon_fav-filled.svg';
 
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+`;
 
 const StyledButton = styled.button`
   ${({ filled }) => {
     if (filled) {
       return css`
         background-image: url(${favIconFilled});
-        background-size: auto 20px;
+        animation: 1s ${pulse} ease-in-out;
       `;
     }
     return css`
       background-image: url(${favIcon});
-      background-size: auto 15px;
     `;
   }}
   background-position: center;

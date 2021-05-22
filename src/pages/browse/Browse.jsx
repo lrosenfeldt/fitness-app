@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { H2, P, SectionWrapper } from 'components/base/base';
-import WorkoutCard from 'components/workoutCard/WorkoutCard';
+import WorkoutBrowser from 'components/workoutBrowser/WorkoutBrowser';
 
 const StyledH2 = styled(H2)`
   margin-top: 71px;
@@ -19,10 +19,7 @@ const Browse = (props) => {
     <SectionWrapper>
       <StyledH2 lang="en">Browse</StyledH2>
       <StyledButton as="button">Filter</StyledButton>
-      <WorkoutCard isNew isFav={false}>Titel des Workouts</WorkoutCard>
-      <WorkoutCard isNew isFav={false} highlighted>Titel des Workouts</WorkoutCard>
-      <WorkoutCard isNew isFav={false}>Titel des Workouts</WorkoutCard>
-      <WorkoutCard isNew isFav={false}>Titel des Workouts</WorkoutCard>
+      <WorkoutBrowser />
     </SectionWrapper> 
   )
 };

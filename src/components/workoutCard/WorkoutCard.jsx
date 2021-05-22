@@ -40,13 +40,13 @@ const StyledP = styled(P).attrs({
   grid-area: newTag;
 `;
 
-const WorkoutCard = (props) => {
+const WorkoutCard = ({ highlighted, id, isFav, isNew, title}) => {
   return (
-    <StyledDiv highlighted={props.highlighted}>
-      <FavButton isFav={props.isFav}/>
-      {props.isNew && <StyledP>Neu</StyledP>}
-      <StyledNavLink to={`program/${1 || props.key}`}>
-        <H2>{props.children}</H2>
+    <StyledDiv highlighted={highlighted}>
+      <FavButton isFav={isFav}/>
+      {isNew && <StyledP>Neu</StyledP>}
+      <StyledNavLink to={`program/${id}`}>
+        <H2>{title}</H2>
       </StyledNavLink>
     </StyledDiv>
   )

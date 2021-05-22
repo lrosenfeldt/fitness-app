@@ -25,11 +25,15 @@ const ExitButton = () => {
   )
 };
 
-const ProgramHeader = ({ title }) => {
+const ProgramHeader = ({ difficulty, duration, focus, title }) => {
   return (
     <StyledSection>
       <StyledH1>{title || "Titel des Programms"}</StyledH1>
-      <TagBox />
+      <TagBox
+        difficulty={difficulty} 
+        duration={duration} 
+        focus={focus} 
+      />
     </StyledSection>
   )
 };

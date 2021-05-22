@@ -32,6 +32,7 @@ query($id: ID!) {
   Program(id: $id) {
     description
     difficulty
+    duration
     focus
     workouts {
       Workout {

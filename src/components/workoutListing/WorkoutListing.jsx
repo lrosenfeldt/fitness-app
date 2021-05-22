@@ -6,7 +6,10 @@ const StyledOl = styled(SectionWrapper).attrs({
   as: "ol"
 })`
   background-color: ${({ theme }) => theme.color.beige};
+  display: grid;
   list-style: none;
+  padding-top: 25px;
+  row-gap: 14px;
 `;
 
 const WorkoutListing = ({ workouts }) => {

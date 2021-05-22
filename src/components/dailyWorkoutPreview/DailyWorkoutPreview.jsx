@@ -20,7 +20,7 @@ const DailyWorkoutPreview = ({ id }) => {
       title={data.Workout.title}
       calories={data.Workout.calories}
       duration={data.Workout.duration}
-      categories={data.Workout.categories && translateWorkoutCategories(data.Workout.categories)}
+      categories={data.Workout.categories}
     />
   )
 }

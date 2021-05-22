@@ -18,14 +18,23 @@ export const GET_WORKOUT_BY_ID = gql`
 `;
 
 export const GET_ALL_PROGRAMS = gql`
-query allProgram($preview: Boolean = false) {
+query {
   allProgram {
     _id
+    _createdAt
     title
-    workouts @skip(if: $preview) {
-      day
+  }
+}
+`;
+
+export const GET_PROGRAM_BY_ID = gql`
+query($id: ID!) {
+  Program(id: $id) {
+    description
+    difficulty
+    focus
+    workouts {
       Workout {
-        _id
         calories
         categories
         duration

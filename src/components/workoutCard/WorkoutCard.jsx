@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { H2, P } from 'components/base/base';
 // import FavButton from './favButton/FavButton';
-import FavButton from './favButton/FavButton';
+import FavButton from '../favButton/FavButton';
 
 
 const StyledDiv = styled.div`

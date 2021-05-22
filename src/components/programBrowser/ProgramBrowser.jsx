@@ -1,11 +1,11 @@
 import { useQuery } from '@apollo/client';
-import { GET_ALL_PROGRAMS } from 'queries/index';
+import { GET_ALL_PROGRAMS } from 'API/queries/index';
 import { P } from 'components/base/base';
 import Spinner from 'components/base/spinner/Spinner';
 import WorkoutCard from 'components/workoutCard/WorkoutCard';
 
 
-const WorkoutBrowser = (props) => {
+const ProgramBrowser = (props) => {
   const { loading, error, data } = useQuery(GET_ALL_PROGRAMS, { variables: {
     preview: true,
   }});
@@ -29,4 +29,4 @@ const WorkoutBrowser = (props) => {
   )
 };
 
-export default WorkoutBrowser;
+export default ProgramBrowser;

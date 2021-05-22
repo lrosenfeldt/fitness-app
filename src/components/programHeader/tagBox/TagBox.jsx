@@ -1,3 +1,5 @@
+import translateProgramDifficulty from 'API/translateProgramDifficulty';
+import translateProgramFocus from 'API/translateProgramFocus';
 import styled from 'styled-components';
 import Tag from './tag/Tag';
 
@@ -10,15 +12,12 @@ const StyledDiv = styled.div`
   padding-bottom: 21px;
 `;
 
-const TagBox = (props) => {
-  const dummyData = [
-    "Abnehmen", "leicht", "6 Wochen"
-  ];
+const TagBox = ({ difficulty, duration, focus }) => {
   return (
     <StyledDiv>
-      {
-        dummyData.map((tag, index) => <Tag key={index}>{tag}</Tag>)
-      }
+      <Tag>{translateProgramFocus(focus)}</Tag>
+      <Tag>{translateProgramDifficulty(difficulty)}</Tag>
+      <Tag>{duration + " Wochen"}</Tag>
     </StyledDiv>
   )
 }

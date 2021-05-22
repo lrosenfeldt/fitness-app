@@ -2,22 +2,8 @@ import { useQuery } from '@apollo/client';
 import { P } from 'components/base/base';
 import Spinner from 'components/base/spinner/Spinner';
 import WorkoutPreviewCard from './workoutPreviewCard/WorkoutPreviewCard';
-import { GET_WORKOUT_BY_ID } from 'queries/index';
-
-
-const category = {
-  strength: "Kraft",
-};
-
-const translateCategories = (categories) => {
-  const translatedArray = categories.map((key) => {
-    return category[key];
-  })
-  if (translatedArray.length > 1) {
-    return translatedArray.join(", ");
-  }
-  return translatedArray[0];
-}
+import translateWorkoutCategories from 'API/translateWorkoutCategories';
+import { GET_WORKOUT_BY_ID } from 'API/queries/index';
 
 
 const DailyWorkoutPreview = ({ id }) => {
@@ -34,7 +20,7 @@ const DailyWorkoutPreview = ({ id }) => {
       title={data.Workout.title}
       calories={data.Workout.calories}
       duration={data.Workout.duration}
-      categories={data.Workout.categories && translateCategories(data.Workout.categories)}
+      categories={data.Workout.categories && translateWorkoutCategories(data.Workout.categories)}
     />
   )
 }

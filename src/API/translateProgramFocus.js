@@ -6,7 +6,7 @@ const translateProgramFocus = (focusKey) => {
   if (focusKey) {
     return ProgramFocusDict[focusKey];
   }
-  return "-"
+  return "-";
 };
 
 export default translateProgramFocus;

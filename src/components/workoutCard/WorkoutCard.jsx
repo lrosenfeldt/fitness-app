@@ -1,9 +1,8 @@
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import { H2, P } from 'components/base/base';
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { H2, P } from "components/base/base";
 // import FavButton from './favButton/FavButton';
-import FavButton from '../favButton/FavButton';
-
+import FavButton from "../favButton/FavButton";
 
 const StyledDiv = styled.div`
   background-color: ${(props) => {
@@ -40,16 +39,16 @@ const StyledP = styled(P).attrs({
   grid-area: newTag;
 `;
 
-const WorkoutCard = ({ highlighted, id, isFav, isNew, title}) => {
+const WorkoutCard = ({ highlighted, id, isFav, isNew, title }) => {
   return (
     <StyledDiv highlighted={highlighted}>
-      <FavButton isFav={isFav}/>
+      <FavButton isFav={isFav} />
       {isNew && <StyledP>Neu</StyledP>}
       <StyledNavLink to={`program/${id}`}>
         <H2>{title}</H2>
       </StyledNavLink>
     </StyledDiv>
-  )
+  );
 };
 
 export default WorkoutCard;

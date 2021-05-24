@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { P, SectionWrapper } from 'components/base/base';
-import { LinkButton } from 'components/base/button/Button';
+import styled from "styled-components";
+import { P, SectionWrapper } from "components/base/base";
+import { LinkButton } from "components/base/button/Button";
 
 const StyledSection = styled(SectionWrapper)`
   background-color: ${({ theme }) => theme.color.beige};
@@ -14,16 +14,15 @@ const StyledDiv = styled.div`
   margin-bottom: 20px;
 `;
 
-const ProgramDescription = (props) => {
-  console.log(props.match);
+const ProgramDescription = ({ children }) => {
   return (
     <StyledSection>
       <StyledDiv>
         <LinkButton to="/dashboard">jetzt starten</LinkButton>
       </StyledDiv>
-      <P>{props.children}</P>
+      <P>{children}</P>
     </StyledSection>
-  )
-}
+  );
+};
 
 export default ProgramDescription;

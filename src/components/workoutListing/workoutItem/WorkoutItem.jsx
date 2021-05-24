@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { P } from 'components/base/base';
-import FavButton from 'components/favButton/FavButton';
-import WorkoutInfo from 'components/workoutInfo/WorkoutInfo';
+import styled from "styled-components";
+import { P } from "components/base/base";
+import FavButton from "components/favButton/FavButton";
+import WorkoutInfo from "components/workoutInfo/WorkoutInfo";
 
 const StyledLi = styled.li`
   background-color: white;
@@ -15,7 +15,7 @@ const StyledWorkoutInfo = styled(WorkoutInfo)`
 const WorkoutItem = ({ calories, categories, duration, index }) => {
   return (
     <StyledLi>
-      <P>{"Tag " + index}</P>
+      <P>{`Tag ${index}`}</P>
       <StyledWorkoutInfo
         calories={calories}
         categories={categories}
@@ -23,7 +23,7 @@ const WorkoutItem = ({ calories, categories, duration, index }) => {
       />
       <FavButton />
     </StyledLi>
-  )
+  );
 };
 
 export default WorkoutItem;

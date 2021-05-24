@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { NavLink as UnstyledNavLink } from 'react-router-dom';
+import styled, { css } from "styled-components";
+import { NavLink as UnstyledNavLink } from "react-router-dom";
 
 export const H1 = styled.h1`
   color: ${({ theme }) => theme.color.navy};
@@ -28,7 +28,7 @@ export const P = styled.p`
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   line-height: ${({ theme }) => theme.lineHeight.text};
 
-  ${({ small }) => 
+  ${({ small }) =>
     small &&
     css`
       color: ${({ theme }) => theme.color.navy};
@@ -48,8 +48,8 @@ export const NavLink = styled(UnstyledNavLink)`
 `;
 
 export const Img = styled.img`
-  height: ${(props) => props.portrait ? "100%" : "auto"};
-  width: ${(props) => props.portrait ? "auto" : "100%"};
+  height: ${(props) => (props.portrait ? "100%" : "auto")};
+  width: ${(props) => (props.portrait ? "auto" : "100%")};
 `;
 
 export const PageWrapper = styled.div`
@@ -57,13 +57,12 @@ export const PageWrapper = styled.div`
   position: relative;
   width: 100vw;
 
-  ${({ noNav }) => 
+  ${({ noNav }) =>
     !noNav &&
     css`
       --navHeight: ${({ theme }) => theme.navHeight};
       margin-bottom: calc(var(--navHeight) + 20px);
-    `
-  };
+    `};
 `;
 
 export const SectionWrapper = styled.section`

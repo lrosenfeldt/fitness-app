@@ -3,7 +3,7 @@ import styled from "styled-components";
 import WorkoutItem from "./workoutItem/WorkoutItem";
 
 const StyledOl = styled(SectionWrapper).attrs({
-  as: "ol"
+  as: "ol",
 })`
   background-color: ${({ theme }) => theme.color.beige};
   display: grid;
@@ -15,19 +15,17 @@ const StyledOl = styled(SectionWrapper).attrs({
 const WorkoutListing = ({ workouts }) => {
   return (
     <StyledOl>
-      {
-        workouts.map(({ Workout }, index) => (
-          <WorkoutItem
-            calories={Workout.calories}
-            categories={Workout.categories}
-            duration={Workout.duration}
-            index={index}
-            key={Workout._id}
-          />
-        ))
-      }
+      {workouts.map(({ Workout }, index) => (
+        <WorkoutItem
+          calories={Workout.calories}
+          categories={Workout.categories}
+          duration={Workout.duration}
+          index={index}
+          key={Workout._id}
+        />
+      ))}
     </StyledOl>
-  )
+  );
 };
 
 export default WorkoutListing;

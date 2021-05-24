@@ -1,5 +1,8 @@
-import { ApolloProvider as BasicApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-
+import {
+  ApolloProvider as BasicApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+} from "@apollo/client";
 
 const client = new ApolloClient({
   // uri: "https://lldcxvcf.api.sanity.io/v1/graphql/production/default",
@@ -7,12 +10,8 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const ApolloProvider = (props) => {
-  return (
-    <BasicApolloProvider client={client}>
-      {props.children}
-    </BasicApolloProvider>
-  )
-}
+const ApolloProvider = ({ children }) => {
+  return <BasicApolloProvider client={client}>{children}</BasicApolloProvider>;
+};
 
 export default ApolloProvider;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { NavLink, Dot } from 'components/base/base';
+import styled from "styled-components";
+import { NavLink, Dot } from "components/base/base";
 
 const StyledDot = styled(Dot)`
   margin: auto;
@@ -11,15 +11,13 @@ const StyledP = styled(NavLink)`
   margin-top: 4px;
 `;
 
-const Tag = (props) => {
-  console.log(props.theme);
-
+const Tag = ({ children }) => {
   return (
     <div>
       <StyledDot />
-      <StyledP as="p">{props.children}</StyledP>
-    </div>    
-  )
-}
+      <StyledP as="p">{children}</StyledP>
+    </div>
+  );
+};
 
 export default Tag;

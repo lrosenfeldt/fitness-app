@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import styled, { css, keyframes } from 'styled-components';
-import favIcon from 'assets/images/icon_fav.svg';
-import favIconFilled from 'assets/images/icon_fav-filled.svg';
+import { useState } from "react";
+import styled, { css, keyframes } from "styled-components";
+import favIcon from "assets/images/icon_fav.svg";
+import favIconFilled from "assets/images/icon_fav-filled.svg";
 
 const pulse = keyframes`
   0% {
@@ -42,13 +42,13 @@ const StyledButton = styled.button`
   width: 30px;
 `;
 
-const FavButton = (props) => {
-  const [fav, setFav] = useState(props.isFav);
-  const favHandler = (event) => {
+const FavButton = ({ isFav }) => {
+  const [fav, setFav] = useState(isFav);
+  const favHandler = () => {
     setFav(!fav);
-  }
+  };
 
-  return <StyledButton filled={fav} onClick={favHandler}/>
+  return <StyledButton filled={fav} onClick={favHandler} />;
 };
 
 export default FavButton;

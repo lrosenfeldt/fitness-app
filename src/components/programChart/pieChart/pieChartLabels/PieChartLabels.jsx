@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { P, Dot } from 'components/base/base';
+import styled from "styled-components";
+import { P, Dot } from "components/base/base";
 
 const StyledDiv = styled.div`
   align-items: center;
@@ -7,24 +7,21 @@ const StyledDiv = styled.div`
   flex-wrap: nowrap;
 `;
 
-
 const StyledDot = styled(Dot)`
   margin-right: ${({ theme }) => theme.fontSize.small};
 `;
 
-const PieChartLabels = (props) => {
+const PieChartLabels = ({ data }) => {
   return (
     <div>
-      {
-        props.data.map((dataset, index) => 
-          <StyledDiv key={index}>
-            <StyledDot color={dataset.color} />
-            <P small>{dataset.title}</P>
-          </StyledDiv> 
-        )
-      }
+      {data.map((dataset) => (
+        <StyledDiv key={dataset.title}>
+          <StyledDot color={dataset.color} />
+          <P small>{dataset.title}</P>
+        </StyledDiv>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default PieChartLabels;

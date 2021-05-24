@@ -1,11 +1,10 @@
-import styled from 'styled-components';
-import iconHome from 'assets/images/icon_home.png';
-import iconBrowse from 'assets/images/icon_browse.png';
-import iconProfile from 'assets/images/icon_profile.png';
-import { Img, NavLink } from 'components/base/base';
+import styled from "styled-components";
+import iconHome from "assets/images/icon_home.png";
+import iconBrowse from "assets/images/icon_browse.png";
+import iconProfile from "assets/images/icon_profile.png";
+import { Img, NavLink } from "components/base/base";
 
-const StyledFigure = styled.figure`
-`;
+const StyledFigure = styled.figure``;
 
 const StyledImg = styled(Img)`
   margin-left: auto;
@@ -17,44 +16,53 @@ const StyledFigcaption = styled(NavLink)`
   text-align: center;
 `;
 
-
-const LinkFigure = (props) => {
+const LinkFigure = ({ children, lang, src }) => {
   return (
     <StyledFigure>
-      <StyledImg portrait src={props.src} alt=""/>
-      <StyledFigcaption as="figcaption" lang={props.lang}>{props.children}</StyledFigcaption>
+      <StyledImg portrait src={src} alt="" />
+      <StyledFigcaption as="figcaption" lang={lang}>
+        {children}
+      </StyledFigcaption>
     </StyledFigure>
-  )
-}
+  );
+};
 
-const LinkIcon = (props) => {
-  if (props.type === "home") {
+const LinkIcon = ({ type }) => {
+  if (type === "home") {
     return (
       <div>
         <NavLink to="/">
-          <LinkFigure src={iconHome} lang="en">Home</LinkFigure>
+          <LinkFigure src={iconHome} lang="en">
+            Home
+          </LinkFigure>
         </NavLink>
       </div>
-    )
-  } else if (props.type === "browse") {
+    );
+  }
+  if (type === "browse") {
     return (
       <div>
         <NavLink to="/browse">
-          <LinkFigure src={iconBrowse} lang="en">Browse</LinkFigure>
+          <LinkFigure src={iconBrowse} lang="en">
+            Browse
+          </LinkFigure>
         </NavLink>
       </div>
-    )
-  } else if (props.type === "profile") {
+    );
+  }
+  if (type === "profile") {
     return (
-    <div>
-      <NavLink to="/profile">
-        <LinkFigure src={iconProfile} lang="de">Profil</LinkFigure>
-      </NavLink>
-    </div>
-    )
+      <div>
+        <NavLink to="/profile">
+          <LinkFigure src={iconProfile} lang="de">
+            Profil
+          </LinkFigure>
+        </NavLink>
+      </div>
+    );
   }
 
-  return null
-}
+  return null;
+};
 
 export default LinkIcon;

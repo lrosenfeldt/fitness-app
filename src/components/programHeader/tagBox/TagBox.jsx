@@ -1,7 +1,7 @@
-import translateProgramDifficulty from 'API/translateProgramDifficulty';
-import translateProgramFocus from 'API/translateProgramFocus';
-import styled from 'styled-components';
-import Tag from './tag/Tag';
+import translateProgramDifficulty from "API/translateProgramDifficulty";
+import translateProgramFocus from "API/translateProgramFocus";
+import styled from "styled-components";
+import Tag from "./tag/Tag";
 
 const StyledDiv = styled.div`
   align-items: center;
@@ -17,9 +17,9 @@ const TagBox = ({ difficulty, duration, focus }) => {
     <StyledDiv>
       <Tag>{translateProgramFocus(focus)}</Tag>
       <Tag>{translateProgramDifficulty(difficulty)}</Tag>
-      <Tag>{duration + " Wochen"}</Tag>
+      <Tag>{`${duration} Wochen`}</Tag>
     </StyledDiv>
-  )
-}
+  );
+};
 
 export default TagBox;

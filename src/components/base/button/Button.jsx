@@ -1,8 +1,7 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import { P } from  'components/base/base';
-
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
+import { P } from "components/base/base";
 
 const Button = styled(P).attrs({
   small: false,
@@ -26,16 +25,16 @@ export const StyledNavLink = styled(NavLink)`
   text-align: center;
 `;
 
-export const LinkButton = (props) => {
+export const LinkButton = ({ children, to }) => {
   return (
-    <NavLink to={props.to}>
-      <Button>{props.children}</Button>
+    <NavLink to={to}>
+      <Button>{children}</Button>
     </NavLink>
-  )
-}
+  );
+};
 
 LinkButton.propTypes = {
-  to: PropTypes.string.isRequired
-}
+  to: PropTypes.string.isRequired,
+};
 
 export default Button;

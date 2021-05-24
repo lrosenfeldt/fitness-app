@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import LinkIcon from './LinkIcon/LinkIcon';
+import styled from "styled-components";
+import LinkIcon from "./LinkIcon/LinkIcon";
 
 const StyledNav = styled.nav`
   align-items: flex-end;
@@ -15,14 +15,14 @@ const StyledNav = styled.nav`
   width: 100vw;
 `;
 
-const Navbar = (props) => {
+const Navbar = () => {
   return (
     <StyledNav>
-        <LinkIcon type="home"></LinkIcon>
-        <LinkIcon type="browse"></LinkIcon>
-        <LinkIcon type="profile"></LinkIcon>
+      <LinkIcon type="home" />
+      <LinkIcon type="browse" />
+      <LinkIcon type="profile" />
     </StyledNav>
-  )
-}
+  );
+};
 
 export default Navbar;

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const StyledWrapper = styled.div`
   margin: 5px 0;
@@ -47,6 +47,6 @@ const Spinner = () => {
       <StyledSpinner />
     </StyledWrapper>
   );
-}
+};
 
 export default Spinner;

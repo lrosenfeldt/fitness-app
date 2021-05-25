@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { H2, P, SectionWrapper } from 'components/base/base';
-import ProgramBrowser from 'components/programBrowser/ProgramBrowser';
+import styled from "styled-components";
+import { H2, P, SectionWrapper } from "components/base/base";
+import ProgramBrowser from "components/programBrowser/ProgramBrowser";
 
 const StyledH2 = styled(H2)`
   margin-top: 71px;
@@ -14,14 +14,14 @@ const StyledButton = styled(P).attrs({
   margin-bottom: 27px;
 `;
 
-const Browse = (props) => {
+const Browse = () => {
   return (
     <SectionWrapper>
       <StyledH2 lang="en">Browse</StyledH2>
       <StyledButton as="button">Filter</StyledButton>
       <ProgramBrowser />
-    </SectionWrapper> 
-  )
+    </SectionWrapper>
+  );
 };
 
 export default Browse;

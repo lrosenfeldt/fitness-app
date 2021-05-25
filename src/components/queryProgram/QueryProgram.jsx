@@ -3,10 +3,10 @@ import { useQuery } from "@apollo/client";
 import { GET_PROGRAM_BY_ID } from "API/queries/index";
 import { P } from "components/base/base";
 import Spinner from "components/base/spinner/Spinner";
-import ProgramChart from "components/programChart/ProgramChart";
-import ProgramDescription from "components/programDescription/ProgramDescription";
-import ProgramHeader from "components/programHeader/ProgramHeader";
-import WorkoutListing from "components/workoutListing/WorkoutListing";
+import ProgramChart from "./programChart/ProgramChart";
+import ProgramDescription from "./programDescription/ProgramDescription";
+import ProgramHeader from "./programHeader/ProgramHeader";
+import WorkoutListing from "./workoutListing/WorkoutListing";
 
 const StyledP = styled(P)`
   margin: 50px 10px;

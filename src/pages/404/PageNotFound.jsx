@@ -1,7 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import { H1, H2 } from 'components/base/base';
-import { LinkButton } from 'components/base/button/Button';
-
+import styled, { keyframes } from "styled-components";
+import { H1, H2 } from "components/base/base";
+import { LinkButton } from "components/base/button/Button";
 
 const StyledDiv = styled.div`
   display: grid;
@@ -30,18 +29,18 @@ const leftRight = keyframes`
 `;
 
 const StyledH2 = styled(H2)`
-  animation: 3s ${leftRight} linear both infinite; 
+  animation: 3s ${leftRight} linear both infinite;
   perspective: 0;
 `;
 
-const PageNotFound = (props) => {
+const PageNotFound = () => {
   return (
     <StyledDiv>
       <H1>Die Seite wurde nicht gefunden, sorry!</H1>
       <StyledH2>404</StyledH2>
       <LinkButton to="/">Bring mich nach Hause!</LinkButton>
     </StyledDiv>
-  )
+  );
 };
 
 export default PageNotFound;

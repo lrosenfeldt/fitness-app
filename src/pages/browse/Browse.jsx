@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { H2, P, SectionWrapper } from "components/base/base";
+import { H2, P, PageWrapper, SectionWrapper } from "components/base/base";
 import ProgramBrowser from "components/programBrowser/ProgramBrowser";
 
 const StyledH2 = styled(H2)`
@@ -16,11 +16,13 @@ const StyledButton = styled(P).attrs({
 
 const Browse = () => {
   return (
-    <SectionWrapper>
-      <StyledH2 lang="en">Browse</StyledH2>
-      <StyledButton as="button">Filter</StyledButton>
-      <ProgramBrowser />
-    </SectionWrapper>
+    <PageWrapper>
+      <SectionWrapper>
+        <StyledH2 lang="en">Browse</StyledH2>
+        <StyledButton as="button">Filter</StyledButton>
+        <ProgramBrowser />
+      </SectionWrapper>
+    </PageWrapper>
   );
 };
 

@@ -10,6 +10,7 @@ const StyledOl = styled(SectionWrapper).attrs({
   list-style: none;
   padding-top: 25px;
   row-gap: 14px;
+  margin-bottom: 14px;
 `;
 
 const WorkoutListing = ({ workouts }) => {

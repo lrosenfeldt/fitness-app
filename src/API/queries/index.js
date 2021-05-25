@@ -1,13 +1,13 @@
 import { gql } from "@apollo/client";
 
 export const GET_WORKOUT_BY_ID = gql`
-  query ($id: ID!) {
+  query ($id: ID!, $noImage: Boolean = false) {
     Workout(id: $id) {
       title
       calories
       duration
       categories
-      image {
+      image @skip(if: $noImage) {
         asset {
           url
           altText

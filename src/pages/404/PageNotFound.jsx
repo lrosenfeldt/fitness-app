@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { H1, H2 } from "components/base/base";
+import { H1, H2, PageWrapper } from "components/base/base";
 import { LinkButton } from "components/base/button/Button";
 
 const StyledDiv = styled.div`
@@ -35,11 +35,13 @@ const StyledH2 = styled(H2)`
 
 const PageNotFound = () => {
   return (
-    <StyledDiv>
-      <H1>Die Seite wurde nicht gefunden, sorry!</H1>
-      <StyledH2>404</StyledH2>
-      <LinkButton to="/">Bring mich nach Hause!</LinkButton>
-    </StyledDiv>
+    <PageWrapper>
+      <StyledDiv>
+        <H1>Die Seite wurde nicht gefunden, sorry!</H1>
+        <StyledH2>404</StyledH2>
+        <LinkButton to="/">Bring mich nach Hause!</LinkButton>
+      </StyledDiv>
+    </PageWrapper>
   );
 };
 

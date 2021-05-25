@@ -22,6 +22,7 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
+<<<<<<< HEAD
 const HeadingWrapper = styled.div`
   justify-items: center;
   grid-area: heading;
@@ -39,6 +40,14 @@ const StyledExitButton = styled(ExitButton)`
   justify-self: end;
   grid-area: exit;
 `;
+=======
+
+const HeadingWrapper = styled.div`
+  grid-area: heading;
+  grid-grid-template-areas: ". title button";
+`;
+
+>>>>>>> origin/main
 
 const QueryWorkout = ({ id }) => {
   const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, {
@@ -55,10 +64,13 @@ const QueryWorkout = ({ id }) => {
 
   return (
     <Wrapper>
+<<<<<<< HEAD
       <HeadingWrapper>
         <StyledP>{data.Workout.title}</StyledP>
         <StyledExitButton to="/browse" />
       </HeadingWrapper>
+=======
+>>>>>>> origin/main
       <TitleWrapper>
         <H1>Tag X</H1>
         <WorkoutInfo

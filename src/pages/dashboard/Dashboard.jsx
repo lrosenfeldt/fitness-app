@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { H1, SectionWrapper } from "components/base/base";
+import { H1, PageWrapper, SectionWrapper } from "components/base/base";
 import DailyWorkoutPreview from "components/dailyWorkoutPreview/DailyWorkoutPreview";
 
 const StyledH1 = styled(H1)`
@@ -38,10 +38,12 @@ const Dashboard = ({ userName }) => {
   });
 
   return (
-    <SectionWrapper>
-      <StyledH1>{greeting}</StyledH1>
-      <DailyWorkoutPreview id={id} />
-    </SectionWrapper>
+    <PageWrapper>
+      <SectionWrapper>
+        <StyledH1>{greeting}</StyledH1>
+        <DailyWorkoutPreview id={id} />
+      </SectionWrapper>
+    </PageWrapper>
   );
 };
 

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useQuery } from "@apollo/client";
 import { GET_WORKOUT_BY_ID } from "API/queries/index";
-import ExitButton from "components/base/exitButton/ExitButton";
+import ArrowButton from "components/base/arrowButton/ArrowButton";
+import { LinkButton } from "components/base/button/Button";
 import { H1, P, SectionWrapper } from "components/base/base";
 import Spinner from "components/base/spinner/Spinner";
 import WorkoutInfo from "components/workoutInfo/WorkoutInfo";
@@ -22,32 +23,32 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
-<<<<<<< HEAD
 const HeadingWrapper = styled.div`
-  justify-items: center;
+  display: grid;
   grid-area: heading;
-  grid-template-areas: ". title exit";
+  grid-template-areas: ". center exit";
+  justify-items: center;
   margin-top: 23px;
 `;
 
 const StyledP = styled(P).attrs({
   small: true,
 })`
-  grid-area: title;
+  grid-area: center;
+  justify-self: center;
+  text-align: center;
 `;
 
-const StyledExitButton = styled(ExitButton)`
-  justify-self: end;
+const ArrowButtonWrapper = styled.div`
   grid-area: exit;
-`;
-=======
-
-const HeadingWrapper = styled.div`
-  grid-area: heading;
-  grid-grid-template-areas: ". title button";
+  justify-self: end;
 `;
 
->>>>>>> origin/main
+const ButtonWrapper = styled.div`
+  align-self: center;
+  grid-area: button;
+  justify-self: center;
+`;
 
 const QueryWorkout = ({ id }) => {
   const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, {
@@ -64,13 +65,12 @@ const QueryWorkout = ({ id }) => {
 
   return (
     <Wrapper>
-<<<<<<< HEAD
       <HeadingWrapper>
         <StyledP>{data.Workout.title}</StyledP>
-        <StyledExitButton to="/browse" />
+        <ArrowButtonWrapper>
+          <ArrowButton />
+        </ArrowButtonWrapper>
       </HeadingWrapper>
-=======
->>>>>>> origin/main
       <TitleWrapper>
         <H1>Tag X</H1>
         <WorkoutInfo
@@ -79,6 +79,9 @@ const QueryWorkout = ({ id }) => {
           duration={data.Workout.duration}
         />
       </TitleWrapper>
+      <ButtonWrapper>
+        <LinkButton to="/browse">los!</LinkButton>
+      </ButtonWrapper>
     </Wrapper>
   );
 };

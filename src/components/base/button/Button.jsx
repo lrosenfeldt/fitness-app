@@ -23,14 +23,11 @@ export const StyledNavLink = styled(NavLink)`
   line-height: ${({ theme }) => theme.lineHeight.text};
   padding: 12px 25px;
   text-align: center;
+  display: block;
 `;
 
 export const LinkButton = ({ children, to }) => {
-  return (
-    <NavLink to={to}>
-      <Button>{children}</Button>
-    </NavLink>
-  );
+  return <StyledNavLink to={to}>{children}</StyledNavLink>;
 };
 
 LinkButton.propTypes = {

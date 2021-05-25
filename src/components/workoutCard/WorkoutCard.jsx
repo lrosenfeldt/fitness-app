@@ -44,7 +44,7 @@ const WorkoutCard = ({ highlighted, id, isFav, isNew, title }) => {
     <StyledDiv highlighted={highlighted}>
       <FavButton isFav={isFav} />
       {isNew && <StyledP>Neu</StyledP>}
-      <StyledNavLink to={`program/${id}`}>
+      <StyledNavLink to={`/program/${id}`}>
         <H2>{title}</H2>
       </StyledNavLink>
     </StyledDiv>

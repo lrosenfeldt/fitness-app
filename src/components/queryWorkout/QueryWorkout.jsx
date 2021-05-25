@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useQuery } from "@apollo/client";
 import { GET_WORKOUT_BY_ID } from "API/queries/index";
-import { NavLink } from "react-router-dom";
 import { H1, P, SectionWrapper } from "components/base/base";
 import Spinner from "components/base/spinner/Spinner";
 import WorkoutInfo from "components/workoutInfo/WorkoutInfo";
@@ -22,10 +21,12 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
+
 const HeadingWrapper = styled.div`
   grid-area: heading;
   grid-grid-template-areas: ". title button";
 `;
+
 
 const QueryWorkout = ({ id }) => {
   const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, {

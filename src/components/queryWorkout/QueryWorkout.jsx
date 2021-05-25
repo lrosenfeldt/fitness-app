@@ -21,6 +21,13 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
+
+const HeadingWrapper = styled.div`
+  grid-area: heading;
+  grid-grid-template-areas: ". title button";
+`;
+
+
 const QueryWorkout = ({ id }) => {
   const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, {
     variables: {

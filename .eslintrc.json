@@ -20,7 +20,8 @@
       "import/no-unresolved": 0,
       "no-underscore-dangle": 0,
       "prettier/prettier": "error",
-      "react/prop-types": 0,
+      "react/prop-types": ["warn", { "skipUndeclared": true}],
+      "react/require-default-props": "off",
       "react/react-in-jsx-scope": 0
   }
 }

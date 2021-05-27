@@ -1,6 +1,26 @@
-import { css } from "styled-components";
+import { css, keyframes } from "styled-components";
 
 const Theme = {
+  animation: {
+    pulse: keyframes`
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.2);
+      }
+      50% {
+        transform: scale(1);
+      }
+      75% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1.0);
+      }
+    `;
+  },
+
   color: {
     beige: "#F5EBDD",
     green: "#D2DDD0",
@@ -35,7 +55,7 @@ const Theme = {
   },
 
   letterSpacing: {
-    navLink: 0.2,
+    navLink: "0.2em",
   },
 
   lineHeight: {
@@ -48,6 +68,7 @@ const Theme = {
   },
 
   navHeight: "50px",
+  pageMargin: "17px",
 };
 
 export default Theme;

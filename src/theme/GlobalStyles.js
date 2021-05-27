@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     border: none;
+    box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;

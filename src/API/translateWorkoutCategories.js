@@ -2,7 +2,7 @@ const categoryDict = {
   strength: "Kraft",
 };
 
-const translateWorkoutCategories = (categories) => {
+function translateWorkoutCategories(categories) {
   const translatedArray = categories.map((key) => {
     return categoryDict[key];
   });
@@ -10,6 +10,6 @@ const translateWorkoutCategories = (categories) => {
     return translatedArray.join(", ");
   }
   return translatedArray[0];
-};
+}
 
 export default translateWorkoutCategories;

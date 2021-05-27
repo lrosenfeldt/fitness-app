@@ -1,26 +1,6 @@
-import { css, keyframes } from "styled-components";
+import { css } from "styled-components";
 
 const Theme = {
-  animation: {
-    pulse: keyframes`
-      0% {
-        transform: scale(1);
-      }
-      25% {
-        transform: scale(1.2);
-      }
-      50% {
-        transform: scale(1);
-      }
-      75% {
-        transform: scale(0.8);
-      }
-      100% {
-        transform: scale(1.0);
-      }
-    `;
-  },
-
   color: {
     beige: "#F5EBDD",
     green: "#D2DDD0",

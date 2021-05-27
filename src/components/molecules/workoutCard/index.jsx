@@ -2,6 +2,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import H2 from "components/atoms/h2";
 
+const Wrapper = styled.div`
+  display: grid;
+`;
+
 const WorkoutCard = ({ title, isFav, isHighlight, isNew }) => {};
 
 WorkoutCard.defaultProps = {

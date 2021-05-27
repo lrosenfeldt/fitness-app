@@ -1,8 +1,26 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import PropTypes from "prop-types";
 import useState from "react";
 import heartIcon from "assets/images/icon_fav.svg";
 import filledHeartIcon from "assets/images/icon_fav-filled.svg";
+
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+`;
 
 const StyledButton = styled.button`
   background-position: center;
@@ -14,7 +32,7 @@ const StyledButton = styled.button`
     if (filled) {
       return css`
         background-image: url(${filledHeartIcon});
-        animation: ${({ theme }) => theme.animation.pulse} 1s ease-in-out;
+        animation: ${pulse} 1s ease-in-out;
       `;
     }
     return css`

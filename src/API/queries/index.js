@@ -34,6 +34,7 @@ export const GET_PROGRAM_BY_ID = gql`
       difficulty
       duration
       focus
+      title
       workouts {
         Workout {
           calories

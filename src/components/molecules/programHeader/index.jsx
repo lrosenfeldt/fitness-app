@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 import Dot from "components/atoms/dot";
 import ExitButton from "components/atoms/exitButton";
 import H1 from "components/atoms/h1";
-import Text from "components/atoms/text";
+import NavLink from "components/atoms/navLink";
 import * as translate from "API/translateTags";
 
-const HeaderWrapper = styled.div`
-  align-items: space-between;
+const HeaderWrapper = styled.section`
   height: 75vh;
   display: grid;
   justify-items: center;
   ${({ theme }) => theme.gradient.yellowToPink};
-  justify-items: center;
+  padding: 25px ${({ theme }) => theme.contentPadding};
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     ". . exitButton"
     "title title title"
@@ -20,14 +20,21 @@ const HeaderWrapper = styled.div`
 `;
 
 const StyledH1 = styled(H1)`
+  align-self: center;
   grid-area: title;
+  text-align: center;
 `;
 
 const StyledExitButton = styled(ExitButton)`
   grid-area: exitButton;
+  align-self: start;
+  justify-self: end;
 `;
 
-const TagBox = styled.div`
+const TagBox = styled(NavLink).attrs({
+  as: "p",
+})`
+  align-self: end;
   align-items: end;
   display: grid;
   justify-items: center;
@@ -42,15 +49,15 @@ const ProgramHeader = ({ difficulty, duration, focus, title }) => {
       <StyledH1>{title}</StyledH1>
       <TagBox gridArea="tag1">
         <Dot size="25px" />
-        <Text>{translate.programFocus(focus)}</Text>
+        {translate.programFocus(focus)}
       </TagBox>
       <TagBox gridArea="tag2">
         <Dot size="25px" />
-        <Text>{translate.programDifficulty(difficulty)}</Text>
+        {translate.programDifficulty(difficulty)}
       </TagBox>
       <TagBox gridArea="tag3">
         <Dot size="25px" />
-        <Text>{`${duration} Wochen`}</Text>
+        {`${duration} Wochen`}
       </TagBox>
     </HeaderWrapper>
   );

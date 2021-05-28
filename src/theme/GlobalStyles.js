@@ -55,6 +55,11 @@ const GlobalStyles = createGlobalStyle`
   button {
     background-color: transparent;
   }
+  
+  #root {
+    width: 100vw;
+    min-height: 100vh;
+  }
 `;
 
 export default GlobalStyles;

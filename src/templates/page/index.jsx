@@ -13,11 +13,7 @@ const PageWrapper = styled.div`
       padding-bottom: calc(${theme.navHeight} + 10px);
     `;
   }}
-  padding-left: ${({ theme }) => theme.pageMargin};
-  padding-right: ${({ theme }) => theme.pageMargin};
-  padding-top: 71px;
-  position: relative;
-  width: 100vw;
+  width: 100%;
 `;
 
 const StyledNavbar = styled(Navbar)`
@@ -26,12 +22,16 @@ const StyledNavbar = styled(Navbar)`
   left: 0;
 `;
 
-const Page = ({ children, noNav }) => {
+const Page = ({ className, children, noNav }) => {
   if (noNav) {
-    return <PageWrapper noNav={noNav}>{children}</PageWrapper>;
+    return (
+      <PageWrapper className={className} noNav={noNav}>
+        {children}
+      </PageWrapper>
+    );
   }
   return (
-    <PageWrapper>
+    <PageWrapper className={className}>
       {children}
       <StyledNavbar />
     </PageWrapper>
@@ -39,12 +39,14 @@ const Page = ({ children, noNav }) => {
 };
 
 Page.defaultProps = {
+  className: "",
   noNav: false,
 };
 
 Page.propTypes = {
-  noNav: PropTypes.bool,
   children: PropTypes.node,
+  className: PropTypes.string,
+  noNav: PropTypes.bool,
 };
 
 export default Page;

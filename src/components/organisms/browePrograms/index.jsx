@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { useQuery } from "@apollo/client";
-import { GET_ALL_PROGRAMS } from "API/queries";
-import Spinner from "components/atoms/spinner";
+import PropTypes from "prop-types";
 import Text from "components/atoms/text";
 import ProgramCard from "components/molecules/programCard";
 
@@ -16,21 +14,17 @@ const ListingWrapper = styled.ul`
 `;
 
 const FilterButton = styled(Text).attrs({
-  as: "button",
   small: true,
   children: "Filter",
 })``;
 
-const BrowsePrograms = () => {
-  const { loading, error, data } = useQuery(GET_ALL_PROGRAMS);
-
-  if (loading) return <Spinner />;
-  if (error) return <Text>Da ist wohl etwas schiefgelaufen...</Text>;
+const BrowsePrograms = ({ programs }) => {
+  console.log(programs);
   return (
     <>
       <FilterButton />
       <ListingWrapper>
-        {data.allProgram.map((program) => (
+        {programs.map((program) => (
           <ProgramCard
             key={program._id}
             id={program._id}
@@ -40,6 +34,15 @@ const BrowsePrograms = () => {
       </ListingWrapper>
     </>
   );
+};
+
+BrowsePrograms.propTypes = {
+  programs: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      title: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default BrowsePrograms;

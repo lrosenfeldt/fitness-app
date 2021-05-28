@@ -9,8 +9,6 @@ const Theme = {
     navy: "#1D2A73",
   },
 
-  test: "lame",
-
   fontSize: {
     h1: "36px",
     h2: "24px",
@@ -51,6 +49,7 @@ const Theme = {
 
   navHeight: "50px",
   pageMargin: "17px",
+  contentPadding: "17px",
 };
 
 export default Theme;

@@ -1,28 +1,25 @@
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import PageWrapper from "templates/page";
+import Greeter from "components/molecules/greeter";
+import DailyWorkoutPreview from "components/organisms/dailyWorkoutPreview";
 
-const GreeterWrapper = styled.div`
+const ContentWrapper = styled(PageWrapper)`
+  padding-left: ${({ theme }) => theme.contentPadding};
+  padding-right: ${({ theme }) => theme.contentPadding};
+  padding-top: 71px;
+`;
+
+const StyledGreeter = styled(Greeter)`
   padding-bottom: 53px;
-  max-width: 255px;
 `;
 
-const WorkoutPreviewWrapper = styled.div`
-  margin-bottom: 11px;
-`;
-
-const Dashboard = ({ greeter, workoutPreview }) => {
+const Dashboard = ({ userName, workout }) => {
   return (
-    <PageWrapper>
-      <GreeterWrapper>{greeter}</GreeterWrapper>
-      <WorkoutPreviewWrapper>{workoutPreview}</WorkoutPreviewWrapper>
-    </PageWrapper>
+    <ContentWrapper>
+      <StyledGreeter userName={userName} />
+      <DailyWorkoutPreview workout={workout} />
+    </ContentWrapper>
   );
-};
-
-Dashboard.propTypes = {
-  greeter: PropTypes.element.isRequired,
-  workoutPreview: PropTypes.element.isRequired,
 };
 
 export default Dashboard;

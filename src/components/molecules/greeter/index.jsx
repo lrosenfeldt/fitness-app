@@ -1,9 +1,14 @@
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import generateGreeting from "API/generateGreeting";
 import H1 from "components/atoms/h1";
 
-const Greeter = ({ userName }) => {
+const StyledH1 = styled(H1)`
+  white-space: pre;
+`;
+
+const Greeter = ({ className, userName }) => {
   let date = new Date();
   const [greeting, setGreeting] = useState(
     generateGreeting(date.getHours(), userName)
@@ -18,10 +23,17 @@ const Greeter = ({ userName }) => {
       clearInterval(checkDaytimeIntervalId);
     };
   });
-  return <H1>{greeting}</H1>;
+  return (
+    <StyledH1 className={className}>{greeting.replaceAll(" ", "\n")}</StyledH1>
+  );
+};
+
+Greeter.defaultProps = {
+  className: "",
 };
 
 Greeter.propTypes = {
+  className: PropTypes.string,
   userName: PropTypes.string.isRequired,
 };
 

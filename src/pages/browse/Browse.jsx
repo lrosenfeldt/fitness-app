@@ -1,13 +1,14 @@
-import BrowsePrograms from "components/organisms/browePrograms";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_PROGRAMS } from "API/queries";
 import BrowseWrapper from "templates/browse";
+import Spinner from "components/atoms/spinner";
+import Text from "components/atoms/text";
 
 const Browse = () => {
-  return (
-    <BrowseWrapper
-      title={{ text: "Browse", lang: "en" }}
-      browsable={<BrowsePrograms />}
-    />
-  );
+  const { loading, error, data } = useQuery(GET_ALL_PROGRAMS);
+  if (loading) return <Spinner />;
+  if (error) return <Text>Da ist wohl etwas schiefgelaufen...</Text>;
+  return <BrowseWrapper programs={data.allProgram} />;
 };
 
 export default Browse;

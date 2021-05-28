@@ -1,35 +1,25 @@
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import PageWrapper from "templates/page";
+import BrowsePrograms from "components/organisms/browePrograms";
 import H2 from "components/atoms/h2";
 
-const HeadingWrapper = styled.div`
+const ContentWrapper = styled(PageWrapper)`
+  padding-left: ${({ theme }) => theme.contentPadding};
+  padding-right: ${({ theme }) => theme.contentPadding};
+  padding-top: 75px;
+`;
+
+const StyledH2 = styled(H2)`
   padding-bottom: 25px;
 `;
 
-const Browse = ({ browsable, title }) => {
+const Browse = ({ programs }) => {
   return (
-    <PageWrapper>
-      <HeadingWrapper>
-        <H2 lang={title.lang}>{title.text}</H2>
-      </HeadingWrapper>
-      {browsable}
-    </PageWrapper>
+    <ContentWrapper>
+      <StyledH2 lang="en">Browse</StyledH2>
+      <BrowsePrograms programs={programs} />
+    </ContentWrapper>
   );
-};
-
-Browse.defaultProps = {
-  title: {
-    lang: "de",
-  },
-};
-
-Browse.propTypes = {
-  browsable: PropTypes.element.isRequired,
-  title: PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    lang: PropTypes.oneOf(["de", "en"]),
-  }),
 };
 
 export default Browse;

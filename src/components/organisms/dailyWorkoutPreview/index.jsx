@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { useQuery } from "@apollo/client";
-import { GET_WORKOUT_BY_ID } from "API/queries";
 import H2 from "components/atoms/h2";
 import Img from "components/atoms/img";
 import Text from "components/atoms/text";
-import Spinner from "components/atoms/spinner";
 import WorkoutParameterLabel from "components/molecules/workoutParameterLabel";
 
 const HeadingWrapper = styled.div`
@@ -19,16 +16,7 @@ const StyledImg = styled(Img)`
   margin-bottom: 11px;
 `;
 
-const DailyWorkoutPreview = ({ id }) => {
-  const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, {
-    variables: {
-      id,
-    },
-  });
-
-  if (loading) return <Spinner />;
-  if (error) return <Text>Da ist wohl etwas schiefgelaufen...</Text>;
-
+const DailyWorkoutPreview = ({ workout }) => {
   return (
     <div>
       <HeadingWrapper>
@@ -36,22 +24,36 @@ const DailyWorkoutPreview = ({ id }) => {
         <Text small>Trainingsplan</Text>
       </HeadingWrapper>
       <StyledImg
-        src={data.Workout.image.asset.url}
-        alt={data.Workout.image.asset.altText}
+        src={workout.image.asset.url}
+        alt={workout.image.asset.altText}
       />
-      <Text>{data.Workout.title}</Text>
+      <Text>{workout.title}</Text>
       <Text>Titel des Programms</Text>
       <WorkoutParameterLabel
-        calories={data.Workout.calories}
-        categories={data.Workout.categories}
-        duration={data.Workout.duration}
+        calories={workout.calories}
+        categories={workout.categories}
+        duration={workout.duration}
       />
     </div>
   );
 };
 
 DailyWorkoutPreview.propTypes = {
-  id: PropTypes.string.isRequired,
+  workout: PropTypes.shape({
+    calories: PropTypes.number.isRequired,
+    categories: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
+    duration: PropTypes.number,
+    image: PropTypes.shape({
+      asset: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        altText: PropTypes.string.isRequired,
+      }),
+    }),
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default DailyWorkoutPreview;

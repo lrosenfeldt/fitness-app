@@ -4,10 +4,9 @@ import NavElement from "components/molecules/navElement";
 
 const StyledNav = styled.nav`
   background-color: ${({ theme }) => theme.color.beige};
-  box-sizing: border-box;
+  height: ${({ theme }) => theme.navHeight};
   padding: 9px 39px 2px 39px;
   width: 100vw;
-  height: ${({ theme }) => theme.navHeight};
 `;
 
 const StyledUl = styled.ul`
@@ -25,9 +24,9 @@ const StyledLi = styled.li`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   return (
-    <StyledNav>
+    <StyledNav className={className}>
       <StyledUl>
         <StyledLi>
           <NavElement type="home" to="/" />

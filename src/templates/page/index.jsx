@@ -1,22 +1,30 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Navbar from "components/organisms/navbar";
 
 const PageWrapper = styled.div`
-  --navHeight: ${({ theme }) => theme.navHeight};
-  box-sizing: border-box;
-  height: calc(100vh - var(--navHeight));
-  margin-bottom: ${({ theme, noNav }) => (noNav && theme.navHeight) || 0};
-  padding: 0 ${({ theme }) => theme.pageMargin};
+  /* height: 100vh; */
+  ${({ theme, noNav }) => {
+    if (noNav) {
+      return css`
+        padding-bottom: 0;
+      `;
+    }
+    return css`
+      padding-bottom: calc(${theme.navHeight} + 10px);
+    `;
+  }}
+  padding-left: ${({ theme }) => theme.pageMargin};
+  padding-right: ${({ theme }) => theme.pageMargin};
+  padding-top: 71px;
   position: relative;
   width: 100vw;
 `;
 
 const StyledNavbar = styled(Navbar)`
+  position: fixed;
   bottom: 0;
-  height: ${({ theme }) => theme.navHeight};
   left: 0;
-  position: absolute;
 `;
 
 const Page = ({ children, noNav }) => {
@@ -24,10 +32,10 @@ const Page = ({ children, noNav }) => {
     return <PageWrapper noNav={noNav}>{children}</PageWrapper>;
   }
   return (
-    <>
-      <PageWrapper>{children}</PageWrapper>
+    <PageWrapper>
+      {children}
       <StyledNavbar />
-    </>
+    </PageWrapper>
   );
 };
 

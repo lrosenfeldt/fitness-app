@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 import ApolloProvider from "components/base/apolloProvider/ApolloProvider";
+import Theme from "styles/Theme";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import GlobalStyles from "./theme/GlobalStyles";
-import Theme from "./theme/Theme";
 
 ReactDOM.render(
   <React.StrictMode>

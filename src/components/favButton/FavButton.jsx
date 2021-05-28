@@ -42,13 +42,15 @@ const StyledButton = styled.button`
   width: 30px;
 `;
 
-const FavButton = ({ isFav }) => {
+const FavButton = ({ className, isFav }) => {
   const [fav, setFav] = useState(isFav);
   const favHandler = () => {
     setFav(!fav);
   };
 
-  return <StyledButton filled={fav} onClick={favHandler} />;
+  return (
+    <StyledButton className={className} filled={fav} onClick={favHandler} />
+  );
 };
 
 export default FavButton;

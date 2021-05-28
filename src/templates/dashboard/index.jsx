@@ -4,7 +4,6 @@ import PageWrapper from "templates/page";
 
 const GreeterWrapper = styled.div`
   padding-bottom: 53px;
-  padding-top: 71px;
   max-width: 255px;
 `;
 

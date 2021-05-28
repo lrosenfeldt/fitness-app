@@ -7,7 +7,7 @@ const WorkoutParameterLabel = ({ calories = "XXX", categories, duration }) => {
     <Text>
       {calories} kcal ·{" "}
       {(duration && `${duration} Min.`) || "So schnell du kannst!"} ·{" "}
-      {translate.workoutCategories(categories)}
+      {translate.workoutCategoryArray(categories)}
     </Text>
   );
 };

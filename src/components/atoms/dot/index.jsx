@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { cssSizeRe } from "API/regExp/";
 
 const Dot = styled.div`
-  background-color: ${(props) => props.color || props.theme.color.beige};
+  background-color: ${({ color, theme }) => color || theme.color.beige};
   border-radius: 50%;
   height: ${({ size, theme }) => size || theme.fontSize.small};
-  width: ${(size, theme) => size || theme.fontSize.small};
+  width: ${({ size, theme }) => size || theme.fontSize.small};
 `;
 
 Dot.defaultProps = {

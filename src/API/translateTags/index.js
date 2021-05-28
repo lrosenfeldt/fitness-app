@@ -1,32 +1,40 @@
-const ProgramDifficultyDict = {
+function translate(dict, key, noKeyFallback) {
+  if (!key) {
+    return noKeyFallback;
+  }
+  if (key in dict) {
+    return dict[key];
+  }
+  return key;
+}
+
+const programDifficultyDict = {
   hard: "Schwierig",
 };
 
 export function programDifficulty(difficultyKey) {
-  if (difficultyKey) {
-    return ProgramDifficultyDict[difficultyKey];
-  }
-  return "-";
+  return translate(programDifficultyDict, difficultyKey, "-");
 }
 
-const ProgramFocusDict = {
+const programFocusDict = {
   strength: "Kraft",
 };
 
 export function programFocus(focusKey) {
-  if (focusKey) {
-    return ProgramFocusDict[focusKey];
-  }
-  return "-";
+  return translate(programFocusDict, focusKey, "-");
 }
 
 const categoryDict = {
   strength: "Kraft",
 };
 
-export function workoutCategories(categories) {
+export function workoutCategory(categoryKey) {
+  return translate(categoryDict, categoryKey, "-");
+}
+
+export function workoutCategoryArray(categories) {
   const translatedArray = categories.map((key) => {
-    return categoryDict[key];
+    return workoutCategory(key);
   });
   if (translatedArray.length > 1) {
     return translatedArray.join(", ");

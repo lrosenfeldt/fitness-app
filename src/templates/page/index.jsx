@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import Navbar from "components/organisms/navbar";
 
 const PageWrapper = styled.div`
-  /* height: 100vh; */
   ${({ theme, noNav }) => {
     if (noNav) {
       return css`

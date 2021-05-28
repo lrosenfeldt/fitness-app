@@ -36,7 +36,12 @@ const Button = ({ children, className, onClickHandler, to, type }) => {
   return null;
 };
 
+Button.defaultProps = {
+  className: "",
+};
+
 Button.propTypes = {
+  className: PropTypes.string,
   type: PropTypes.oneOf(["button", "link"]).isRequired,
   onClickHandler: ({ onClickHandler, type }, propName, componentName) => {
     if (type === "link" && onClickHandler) {

@@ -1,29 +1,14 @@
-import styled from "styled-components";
-import { H2, P, PageWrapper, SectionWrapper } from "components/base/base";
-import ProgramBrowser from "components/programBrowser/ProgramBrowser";
-
-const StyledH2 = styled(H2)`
-  margin-top: 71px;
-  margin-bottom: 25px;
-`;
-
-const StyledButton = styled(P).attrs({
-  small: true,
-})`
-  background-color: transparent;
-  margin-bottom: 27px;
-`;
+import { useQuery } from "@apollo/client";
+import { GET_ALL_PROGRAMS } from "API/queries";
+import BrowseWrapper from "templates/browse";
+import Spinner from "components/atoms/spinner";
+import Text from "components/atoms/text";
 
 const Browse = () => {
-  return (
-    <PageWrapper>
-      <SectionWrapper>
-        <StyledH2 lang="en">Browse</StyledH2>
-        <StyledButton as="button">Filter</StyledButton>
-        <ProgramBrowser />
-      </SectionWrapper>
-    </PageWrapper>
-  );
+  const { loading, error, data } = useQuery(GET_ALL_PROGRAMS);
+  if (loading) return <Spinner />;
+  if (error) return <Text>Da ist wohl etwas schiefgelaufen...</Text>;
+  return <BrowseWrapper programs={data.allProgram} />;
 };
 
 export default Browse;

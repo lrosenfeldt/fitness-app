@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     border: none;
+    box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;
@@ -53,6 +54,11 @@ const GlobalStyles = createGlobalStyle`
 
   button {
     background-color: transparent;
+  }
+  
+  #root {
+    width: 100vw;
+    min-height: 100vh;
   }
 `;
 

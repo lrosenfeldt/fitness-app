@@ -35,7 +35,7 @@ const Theme = {
   },
 
   letterSpacing: {
-    navLink: 0.2,
+    navLink: "0.2em",
   },
 
   lineHeight: {
@@ -48,6 +48,8 @@ const Theme = {
   },
 
   navHeight: "50px",
+  pageMargin: "17px",
+  contentPadding: "17px",
 };
 
 export default Theme;

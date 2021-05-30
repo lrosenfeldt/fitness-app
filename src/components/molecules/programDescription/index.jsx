@@ -18,17 +18,16 @@ const StyledButton = styled(Button).attrs({
   margin-bottom: 20px;
 `;
 
-const ProgramDescription = ({ description, firstWorkoutID }) => {
+const ProgramDescription = ({ description }) => {
   return (
     <StyledSection>
-      <StyledButton to={`/program/day1/${firstWorkoutID}`} />
+      <StyledButton to="/program/day1/1" />
       <Text>{description}</Text>
     </StyledSection>
   );
 };
 
 ProgramDescription.propTypes = {
-  firstWorkoutID: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
 

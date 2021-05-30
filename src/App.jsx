@@ -8,7 +8,6 @@ import Dashboard from "pages/dashboard";
 import Browse from "pages/browse/Browse";
 import Program from "pages/program";
 import PageNotFound from "pages/404/PageNotFound";
-import Workout from "pages/workout/Workout";
 
 function App() {
   return (
@@ -28,10 +27,6 @@ function App() {
 
         <Route path="/program/:id">
           <Program />
-        </Route>
-
-        <Route path="/workout/">
-          <Workout />
         </Route>
 
         <Route>

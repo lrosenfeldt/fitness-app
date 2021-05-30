@@ -21,6 +21,7 @@ const StyledLi = styled(Text).attrs({
   column-gap: 12px;
   display: grid;
   grid-template-columns: 12px 1fr;
+  padding: 9px 0;
 `;
 
 const pieChartColors = ["#7A8778", "#939C91", "#BBC8B9", "#D2DDD0"];

@@ -2,14 +2,24 @@ import PropTypes from "prop-types";
 import * as translate from "API/translateTags";
 import Text from "components/atoms/text";
 
-const WorkoutParameterLabel = ({ calories = "XXX", categories, duration }) => {
+const WorkoutParameterLabel = ({
+  calories,
+  categories,
+  className,
+  duration,
+}) => {
   return (
-    <Text>
-      {calories} kcal ·{" "}
-      {(duration && `${duration} Min.`) || "So schnell du kannst!"} ·{" "}
+    <Text className={className}>
+      {calories} kcal · {`${duration} Min.`} ·{" "}
       {translate.workoutCategoryArray(categories)}
     </Text>
   );
+};
+
+WorkoutParameterLabel.defaultProps = {
+  calories: "XXX",
+  className: "",
+  duration: "So schnell du kannst!",
 };
 
 WorkoutParameterLabel.propTypes = {
@@ -18,6 +28,7 @@ WorkoutParameterLabel.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
+  className: PropTypes.string,
   duration: PropTypes.number,
 };
 

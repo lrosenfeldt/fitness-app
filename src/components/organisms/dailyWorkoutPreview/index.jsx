@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import H2 from "components/atoms/h2";
 import Img from "components/atoms/img";
 import Text from "components/atoms/text";
-import WorkoutParameterLabel from "components/molecules/workoutParameterLabel";
+import WorkoutParameterLabel from "components/atoms/workoutParameterLabel";
 
 const HeadingWrapper = styled.div`
   align-items: baseline;

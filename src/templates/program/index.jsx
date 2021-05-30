@@ -1,17 +1,20 @@
+/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
-import PieChart from "components/molecules/pieChart";
 import ProgramDescription from "components/molecules/programDescription";
 import ProgramHeader from "components/molecules/programHeader";
 import PageWraper from "templates/page";
+import ProgramChart from "components/organisms/programChart";
+import WorkoutListing from "components/organisms/workoutListing/";
 
 const Program = ({
   description,
   difficulty,
   duration,
-  firstWorkoutID,
   focus,
   title,
+  workouts,
 }) => {
+  const firstWorkoutID = workouts[0].Workout._id;
   return (
     <PageWraper>
       <ProgramHeader
@@ -24,7 +27,8 @@ const Program = ({
         description={description}
         firstWorkoutID={firstWorkoutID}
       />
-      <PieChart />
+      <ProgramChart />
+      <WorkoutListing workouts={workouts} />
     </PageWraper>
   );
 };
@@ -37,9 +41,7 @@ Program.propTypes = {
   description: PropTypes.string,
   difficulty: PropTypes.string.isRequired,
   duration: PropTypes.number.isRequired,
-  firstWorkoutID: PropTypes.string.isRequired,
   focus: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
 };
 
 export default Program;

@@ -13,10 +13,8 @@ const Program = () => {
       id,
     },
   });
-
   if (loading) return <Spinner />;
   if (error) return <Text>Da ist wohl etwas schiefgelaufen.</Text>;
-
   return (
     <ProgramTemplate
       difficulty={data.Program.difficulty}
@@ -25,6 +23,7 @@ const Program = () => {
       title={data.Program.title}
       description={data.Program.description}
       firstWorkoutID="empty"
+      workouts={data.Program.workouts}
     />
   );
 };

@@ -27,7 +27,7 @@ const Program = ({
         description={description}
         firstWorkoutID={firstWorkoutID}
       />
-      <ProgramChart />
+      <ProgramChart workouts={workouts} />
       <WorkoutListing workouts={workouts} />
     </PageWraper>
   );

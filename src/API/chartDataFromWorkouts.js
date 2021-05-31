@@ -1,8 +1,10 @@
+import * as translate from "API/translateTags";
+
 function chartDataFromWorkouts(workouts, colors) {
   const dataWrapper = new Map();
-  workouts.foreach((workout) => {
-    const increment = workout.categories.length;
-    workout.categories.foreach((category) => {
+  workouts.forEach(({ Workout }) => {
+    const increment = Workout.categories.length;
+    Workout.categories.forEach((category) => {
       if (dataWrapper.has(category)) {
         dataWrapper.set(category, dataWrapper.get(category) + 1 / increment);
       } else {
@@ -14,7 +16,11 @@ function chartDataFromWorkouts(workouts, colors) {
   const data = [];
   let index = 0;
   dataWrapper.forEach((value, category) => {
-    index = data.push({ title: category, value, color: colors[index] });
+    index = data.push({
+      title: translate.workoutCategory(category),
+      value,
+      color: colors[index],
+    });
   });
 
   return data;

@@ -19,7 +19,6 @@ const FilterButton = styled(Text).attrs({
 })``;
 
 const BrowsePrograms = ({ programs }) => {
-  console.log(programs);
   return (
     <>
       <FilterButton />

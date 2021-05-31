@@ -16,11 +16,14 @@ Dot.defaultProps = {
 
 Dot.propTypes = {
   color: PropTypes.string,
-  size: ({ size }, propName, componentName) => {
-    if (cssSizeRe.test(size)) {
+  size: ({ size }) => {
+    if (!size) {
+      return null;
+    }
+    if (!cssSizeRe.test(size)) {
       return new Error(
         `Invalid prop \`${size}\` supplied to` +
-          ` \`${componentName}\`. Should be number + "em|rem|%|px". Validation failed.`
+          ` \`Dot\`. Should be number + "em|rem|%|px". Validation failed.`
       );
     }
     return null;

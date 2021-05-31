@@ -32,7 +32,7 @@ const StyledExitButton = styled(ExitButton)`
 `;
 
 const TagBox = styled(NavLink).attrs({
-  as: "p",
+  as: "div",
 })`
   align-self: end;
   align-items: end;
@@ -42,6 +42,10 @@ const TagBox = styled(NavLink).attrs({
   grid-area: ${({ gridArea }) => gridArea};
 `;
 
+const TagText = styled(NavLink).attrs({
+  as: "p",
+})``;
+
 const ProgramHeader = ({ difficulty, duration, focus, title }) => {
   return (
     <HeaderWrapper>
@@ -49,15 +53,15 @@ const ProgramHeader = ({ difficulty, duration, focus, title }) => {
       <StyledH1>{title}</StyledH1>
       <TagBox gridArea="tag1">
         <Dot size="25px" />
-        {translate.programFocus(focus)}
+        <TagText>{translate.programFocus(focus)}</TagText>
       </TagBox>
       <TagBox gridArea="tag2">
         <Dot size="25px" />
-        {translate.programDifficulty(difficulty)}
+        <TagText>{translate.programDifficulty(difficulty)}</TagText>
       </TagBox>
       <TagBox gridArea="tag3">
         <Dot size="25px" />
-        {`${duration} Wochen`}
+        <TagText>{`${duration} Wochen`}</TagText>
       </TagBox>
     </HeaderWrapper>
   );

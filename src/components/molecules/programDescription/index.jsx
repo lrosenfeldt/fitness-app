@@ -4,15 +4,17 @@ import Text from "components/atoms/text";
 import Button from "components/atoms/button";
 
 const StyledSection = styled.section`
+  align-items: center;
   background-color: ${({ theme }) => theme.color.beige};
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 17px;
   padding-left: ${({ theme }) => theme.contentPadding};
   padding-right: ${({ theme }) => theme.contentPadding};
+  padding-top: 20px;
 `;
 
 const StyledButton = styled(Button).attrs({
-  type: "link",
   children: "jetzt starten",
 })`
   margin-bottom: 20px;
@@ -21,7 +23,7 @@ const StyledButton = styled(Button).attrs({
 const ProgramDescription = ({ description }) => {
   return (
     <StyledSection>
-      <StyledButton to="/program/day1/1" />
+      <StyledButton to="/program/day1/1" type="link" />
       <Text>{description}</Text>
     </StyledSection>
   );

@@ -5,19 +5,21 @@ import WorkoutCard from "components/molecules/workoutCard";
 
 const SectionWrapper = styled.section`
   background-color: ${({ theme }) => theme.color.beige};
+  padding-bottom: 20px;
   padding-left: ${({ theme }) => theme.contentPadding};
   padding-right: ${({ theme }) => theme.contentPadding};
+  padding-top: 35px;
 `;
 
 const StyledUl = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   list-style: none;
+  padding-top: 25px;
   row-gap: 14px;
 `;
 
 const WorkoutListing = ({ className, workouts }) => {
-  workouts.map((el) => console.log(el.Workout));
   return (
     <SectionWrapper className={className}>
       <H3>{`${workouts.length} Tage`}</H3>

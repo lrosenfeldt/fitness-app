@@ -7,15 +7,16 @@ import Text from "components/atoms/text";
 
 const StyledLi = styled.li`
   background-color: white;
+  border-radius: 5px;
   padding: 15px 18px 10px 14px;
 `;
 
 const NavLinkWrapper = styled(NavLink)`
+  display: block;
   padding-bottom: 30px;
 `;
 
 const WorkoutCard = ({ className, Workout }) => {
-  console.log(Workout);
   return (
     <StyledLi className={className}>
       <NavLinkWrapper to="/">
@@ -38,14 +39,12 @@ WorkoutCard.defaultProps = {
 WorkoutCard.propTypes = {
   className: PropTypes.string,
   Workout: PropTypes.shape({
-    Workout: PropTypes.shape({
-      calories: PropTypes.number,
-      categories: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.arrayOf(PropTypes.string),
-      ]).isRequired,
-      duration: PropTypes.number,
-    }),
+    calories: PropTypes.number,
+    categories: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]).isRequired,
+    duration: PropTypes.number,
   }).isRequired,
 };
 

@@ -7,7 +7,7 @@ import {
 import Dashboard from "pages/dashboard";
 import Browse from "pages/browse/Browse";
 import Program from "pages/program";
-import PageNotFound from "pages/404/PageNotFound";
+import PageNotFound from "pages/404";
 
 function App() {
   return (

@@ -6,7 +6,7 @@ const StyledNavLink = styled(NavLink)`
   background-color: ${({ theme }) => theme.color.navy};
   border-radius: 50px;
   color: white;
-  display: block;
+  display: inline-block;
   font-size: ${({ theme }) => theme.fontSize.text};
   font-weight: ${({ theme }) => theme.fontWeight.text};
   line-height: ${({ theme }) => theme.lineHeight.text};
@@ -16,7 +16,9 @@ const StyledNavLink = styled(NavLink)`
 
 const StyledButton = styled(StyledNavLink).attrs({
   as: "button",
-})``;
+})`
+  display: block;
+`;
 
 const Button = ({ children, className, onClickHandler, to, type }) => {
   if (type === "button") {

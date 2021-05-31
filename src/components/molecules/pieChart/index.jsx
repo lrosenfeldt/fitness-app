@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PieChart as PieChartMinimal } from "react-minimal-pie-chart";
+import chartDataFromWorkouts from "API/chartDataFromWorkouts";
 import Text from "components/atoms/text";
 import Dot from "components/atoms/dot";
 
@@ -18,6 +19,7 @@ const StyledLi = styled(Text).attrs({
   as: "li",
   small: true,
 })`
+  align-items: center;
   column-gap: 12px;
   display: grid;
   grid-template-columns: 12px 1fr;
@@ -26,13 +28,8 @@ const StyledLi = styled(Text).attrs({
 
 const pieChartColors = ["#7A8778", "#939C91", "#BBC8B9", "#D2DDD0"];
 
-const PieChart = () => {
-  const data = [
-    { title: "Krafttraining", value: 1, color: pieChartColors[0] },
-    { title: "Cardio", value: 2, color: pieChartColors[1] },
-    { title: "Koordination", value: 3, color: pieChartColors[2] },
-    { title: "Beweglichkeit", value: 4, color: pieChartColors[3] },
-  ];
+const PieChart = ({ workouts }) => {
+  const data = chartDataFromWorkouts(workouts, pieChartColors);
   return (
     <StyledSection>
       <PieChartMinimal data={data} segmentsShift={0.5} radius={49.5} />

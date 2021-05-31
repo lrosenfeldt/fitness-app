@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 const StyledWrapper = styled.div`
-  margin: 5px 0;
+  margin: 40px 0;
   position: relative;
   width: 100%;
 `;

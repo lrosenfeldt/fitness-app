@@ -11,11 +11,11 @@ const StyledH3 = styled(H3)`
   padding-bottom: 40px;
 `;
 
-const ProgramChart = ({ className }) => {
+const ProgramChart = ({ className, workouts }) => {
   return (
     <StyledSection className={className}>
       <StyledH3>So ist das Program aufgeteilt:</StyledH3>
-      <PieChart />
+      <PieChart workouts={workouts} />
     </StyledSection>
   );
 };

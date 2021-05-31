@@ -49,11 +49,11 @@ const NewTag = styled(Text).attrs({
   display: block;
 `;
 
-const ProgramCard = ({ id, isFav, isHighlight, title }) => {
+const ProgramCard = ({ id, isFav, isNew, isHighlight, title }) => {
   return (
     <Wrapper isHighlight={isHighlight} key={id}>
       <StyledFavButton isFav={isFav} />
-      <NewTag />
+      {isNew && <NewTag />}
       <NavLinkWrapper to={`/program/${id}`}>
         <H2>{title}</H2>
       </NavLinkWrapper>
@@ -63,6 +63,7 @@ const ProgramCard = ({ id, isFav, isHighlight, title }) => {
 
 ProgramCard.defaultProps = {
   isFav: false,
+  isNew: false,
   isHighlight: false,
 };
 
@@ -70,6 +71,7 @@ ProgramCard.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isFav: PropTypes.bool,
+  isNew: PropTypes.bool,
   isHighlight: PropTypes.bool,
 };
 

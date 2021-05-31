@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Text from "components/atoms/text";
 import ProgramCard from "components/molecules/programCard";
+import isOlderThan from "API/isOlderThan";
 
 const ListingWrapper = styled.ul`
   display: grid;
@@ -27,6 +28,7 @@ const BrowsePrograms = ({ programs }) => {
           <ProgramCard
             key={program._id}
             id={program._id}
+            isNew={!isOlderThan(program._createdAt, 2)}
             title={program.title}
           />
         ))}

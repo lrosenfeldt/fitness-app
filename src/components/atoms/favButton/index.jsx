@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import PropTypes from "prop-types";
-// import useState from "react";
+import { useState } from "react";
 import heartIcon from "assets/images/icon_fav.svg";
 import filledHeartIcon from "assets/images/icon_fav-filled.svg";
 
@@ -42,7 +42,17 @@ const StyledButton = styled.button`
 `;
 
 const FavButton = ({ className, isFav }) => {
-  return <StyledButton className={className} filled={isFav} />;
+  const [filled, setFilled] = useState(isFav);
+  const toggleFilledHandler = () => {
+    setFilled(!filled);
+  };
+  return (
+    <StyledButton
+      className={className}
+      filled={filled}
+      onClick={toggleFilledHandler}
+    />
+  );
 };
 
 FavButton.defaultProps = {

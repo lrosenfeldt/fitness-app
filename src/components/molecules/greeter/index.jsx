@@ -28,10 +28,6 @@ const Greeter = ({ className, userName }) => {
   );
 };
 
-Greeter.defaultProps = {
-  className: "",
-};
-
 Greeter.propTypes = {
   className: PropTypes.string,
   userName: PropTypes.string.isRequired,

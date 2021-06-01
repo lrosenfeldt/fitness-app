@@ -3,23 +3,18 @@ import * as translate from "API/translateTags";
 import Text from "components/atoms/text";
 
 const WorkoutParameterLabel = ({
-  calories,
+  calories = "XXX",
   categories,
   className,
   duration,
 }) => {
   return (
     <Text className={className}>
-      {calories} kcal · {`${duration} Min.`} ·{" "}
+      {calories} kcal ·{" "}
+      {(duration && `${duration} Min.`) || "So schnell du kannst"} ·{" "}
       {translate.workoutCategoryArray(categories)}
     </Text>
   );
-};
-
-WorkoutParameterLabel.defaultProps = {
-  calories: "XXX",
-  className: "",
-  duration: "So schnell du kannst!",
 };
 
 WorkoutParameterLabel.propTypes = {

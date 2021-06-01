@@ -36,10 +36,6 @@ const WorkoutListing = ({ className, workouts }) => {
   );
 };
 
-WorkoutListing.defaultProps = {
-  className: "",
-};
-
 WorkoutListing.propTypes = {
   className: PropTypes.string,
   workouts: PropTypes.arrayOf(

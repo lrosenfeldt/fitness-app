@@ -2,9 +2,9 @@ import * as translate from "API/translateTags";
 
 function chartDataFromWorkouts(workouts, colors) {
   const dataWrapper = new Map();
-  workouts.forEach(({ Workout }) => {
-    const increment = Workout.categories.length;
-    Workout.categories.forEach((category) => {
+  workouts.forEach(({ Workout: { categories } }) => {
+    const increment = categories.length;
+    categories.forEach((category) => {
       if (dataWrapper.has(category)) {
         dataWrapper.set(category, dataWrapper.get(category) + 1 / increment);
       } else {

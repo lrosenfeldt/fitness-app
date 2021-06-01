@@ -41,7 +41,7 @@ const StyledButton = styled.button`
   }}
 `;
 
-const FavButton = ({ className, isFav }) => {
+const FavButton = ({ className, isFav = false }) => {
   const [filled, setFilled] = useState(isFav);
   const toggleFilledHandler = () => {
     setFilled(!filled);
@@ -53,11 +53,6 @@ const FavButton = ({ className, isFav }) => {
       onClick={toggleFilledHandler}
     />
   );
-};
-
-FavButton.defaultProps = {
-  isFav: false,
-  className: "",
 };
 
 FavButton.propTypes = {

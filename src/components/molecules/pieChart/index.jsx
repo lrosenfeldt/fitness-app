@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { PieChart as PieChartMinimal } from "react-minimal-pie-chart";
 import chartDataFromWorkouts from "API/chartDataFromWorkouts";
 import Text from "components/atoms/text";
@@ -43,6 +44,19 @@ const PieChart = ({ workouts }) => {
       </StyledUl>
     </StyledSection>
   );
+};
+
+PieChart.propTypes = {
+  workouts: PropTypes.arrayOf(
+    PropTypes.shape({
+      Workout: PropTypes.shape({
+        categories: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.arrayOf(PropTypes.string),
+        ]),
+      }),
+    })
+  ).isRequired,
 };
 
 export default PieChart;

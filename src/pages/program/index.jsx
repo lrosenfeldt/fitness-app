@@ -15,15 +15,16 @@ const Program = () => {
   });
   if (loading) return <Spinner />;
   if (error) return <Text>Da ist wohl etwas schiefgelaufen.</Text>;
+  const { Program: ProgramData } = data;
   return (
     <ProgramTemplate
-      difficulty={data.Program.difficulty}
-      duration={data.Program.duration}
-      focus={data.Program.focus}
-      title={data.Program.title}
-      description={data.Program.description}
+      difficulty={ProgramData.difficulty}
+      duration={ProgramData.duration}
+      focus={ProgramData.focus}
+      title={ProgramData.title}
+      description={ProgramData.description}
       firstWorkoutID="empty"
-      workouts={data.Program.workouts}
+      workouts={ProgramData.workouts}
     />
   );
 };

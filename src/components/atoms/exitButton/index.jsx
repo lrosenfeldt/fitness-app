@@ -24,7 +24,7 @@ const StyledButton = styled.button`
   }}
 `;
 
-const ExitButton = ({ className, type }) => {
+const ExitButton = ({ className, type = null }) => {
   const history = useHistory();
   const goBackHandler = () => {
     history.goBack();
@@ -33,11 +33,6 @@ const ExitButton = ({ className, type }) => {
   return (
     <StyledButton className={className} type={type} onClick={goBackHandler} />
   );
-};
-
-ExitButton.defaultProps = {
-  className: "",
-  type: "",
 };
 
 ExitButton.propTypes = {

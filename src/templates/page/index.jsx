@@ -13,7 +13,7 @@ const StyledNavbar = styled(Navbar)`
   left: 0;
 `;
 
-const Page = ({ className, children, noNav }) => {
+const Page = ({ className, children, noNav = false }) => {
   if (noNav) {
     return (
       <PageWrapper className={className} noNav={noNav}>
@@ -27,11 +27,6 @@ const Page = ({ className, children, noNav }) => {
       <StyledNavbar />
     </PageWrapper>
   );
-};
-
-Page.defaultProps = {
-  className: "",
-  noNav: false,
 };
 
 Page.propTypes = {

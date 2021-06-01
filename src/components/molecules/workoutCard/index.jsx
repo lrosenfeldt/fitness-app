@@ -32,10 +32,6 @@ const WorkoutCard = ({ className, Workout }) => {
   );
 };
 
-WorkoutCard.defaultProps = {
-  className: "",
-};
-
 WorkoutCard.propTypes = {
   className: PropTypes.string,
   Workout: PropTypes.shape({

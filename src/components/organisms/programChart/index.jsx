@@ -20,12 +20,18 @@ const ProgramChart = ({ className, workouts }) => {
   );
 };
 
-ProgramChart.defaultProps = {
-  className: "",
-};
-
 ProgramChart.propTypes = {
   className: PropTypes.string,
+  workouts: PropTypes.arrayOf(
+    PropTypes.shape({
+      Workout: PropTypes.shape({
+        categories: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.arrayOf(PropTypes.string),
+        ]),
+      }),
+    })
+  ).isRequired,
 };
 
 export default ProgramChart;

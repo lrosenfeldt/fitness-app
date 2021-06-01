@@ -33,10 +33,6 @@ const Program = ({
   );
 };
 
-Program.defaultProps = {
-  description: "",
-};
-
 Program.propTypes = {
   description: PropTypes.string,
   difficulty: PropTypes.string.isRequired,

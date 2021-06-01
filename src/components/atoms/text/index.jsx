@@ -25,10 +25,6 @@ const Text = ({ className, children, small }) => {
   );
 };
 
-Text.defaultProps = {
-  className: "",
-};
-
 Text.propTypes = {
   small: PropTypes.bool,
   children: PropTypes.node.isRequired,

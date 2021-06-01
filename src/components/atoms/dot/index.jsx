@@ -9,11 +9,6 @@ const Dot = styled.div`
   width: ${({ size, theme }) => size || theme.fontSize.small};
 `;
 
-Dot.defaultProps = {
-  color: null,
-  size: null,
-};
-
 Dot.propTypes = {
   color: PropTypes.string,
   size: ({ size }) => {

@@ -61,12 +61,6 @@ const ProgramCard = ({ id, isFav, isNew, isHighlight, title }) => {
   );
 };
 
-ProgramCard.defaultProps = {
-  isFav: false,
-  isNew: false,
-  isHighlight: false,
-};
-
 ProgramCard.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

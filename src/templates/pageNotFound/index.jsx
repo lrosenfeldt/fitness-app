@@ -17,7 +17,7 @@ const ContentWrapper = styled(PageWrapper)`
 `;
 
 const StyledExitButton = styled(ExitButton).attrs({
-  type: "arrow",
+  buttonType: "arrow",
 })`
   grid-area: exitButton;
   align-self: end;
@@ -59,7 +59,7 @@ const StyledText = styled(Text)`
 
 const StyledButton = styled(Button).attrs({
   to: "/",
-  type: "link",
+  buttonType: "link",
   children: "Bring mich nach Hause!",
 })`
   grid-area: button;

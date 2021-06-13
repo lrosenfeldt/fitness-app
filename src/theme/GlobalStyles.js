@@ -55,6 +55,10 @@ const GlobalStyles = createGlobalStyle`
   button {
     background-color: transparent;
   }
+
+  ul {
+    list-style: none;
+  }
   
   #root {
     width: 100vw;

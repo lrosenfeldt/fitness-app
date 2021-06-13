@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Text from "components/atoms/text";
 import ProgramCard from "components/molecules/programCard";
 import isOlderThan from "API/isOlderThan";
+import FilterForm from "components/molecules/filterForm";
 
 const ListingWrapper = styled.ul`
   display: grid;
@@ -14,15 +14,10 @@ const ListingWrapper = styled.ul`
   width: 100%;
 `;
 
-const FilterButton = styled(Text).attrs({
-  small: true,
-  children: "Filter",
-})``;
-
-const BrowsePrograms = ({ programs }) => {
+const BrowsePrograms = ({ programs, refetch }) => {
   return (
     <>
-      <FilterButton />
+      <FilterForm refetch={refetch} />
       <ListingWrapper>
         {programs.map((program) => (
           <ProgramCard
@@ -44,6 +39,7 @@ BrowsePrograms.propTypes = {
       title: PropTypes.string,
     })
   ).isRequired,
+  refetch: PropTypes.func.isRequired,
 };
 
 export default BrowsePrograms;

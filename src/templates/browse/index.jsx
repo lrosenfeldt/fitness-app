@@ -13,11 +13,11 @@ const StyledH2 = styled(H2)`
   padding-bottom: 25px;
 `;
 
-const Browse = ({ programs }) => {
+const Browse = ({ programs, refetch }) => {
   return (
     <ContentWrapper>
       <StyledH2 lang="en">Browse</StyledH2>
-      <BrowsePrograms programs={programs} />
+      <BrowsePrograms programs={programs} refetch={refetch} />
     </ContentWrapper>
   );
 };

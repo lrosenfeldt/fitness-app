@@ -20,15 +20,15 @@ const StyledButton = styled(StyledNavLink).attrs({
   display: block;
 `;
 
-const Button = ({ children, className, onClickHandler, to, type }) => {
-  if (type === "button") {
+const Button = ({ children, className, onClickHandler, to, buttonType }) => {
+  if (buttonType === "button") {
     return (
       <StyledButton className={className} onClick={onClickHandler}>
         {children}
       </StyledButton>
     );
   }
-  if (type === "link") {
+  if (buttonType === "link") {
     return (
       <StyledNavLink className={className} to={to}>
         {children}
@@ -40,14 +40,14 @@ const Button = ({ children, className, onClickHandler, to, type }) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  type: PropTypes.oneOf(["button", "link"]).isRequired,
-  onClickHandler: ({ onClickHandler, type }, propName, componentName) => {
-    if (type === "link" && onClickHandler) {
+  buttonType: PropTypes.oneOf(["button", "link"]).isRequired,
+  onClickHandler: ({ onClickHandler, buttonType }, propName, componentName) => {
+    if (buttonType === "link" && onClickHandler) {
       return new Error(
-        `\`onClickHandler\` prop passed to \`${componentName}\` but type \`link\` specified. Validation failed.`
+        `\`onClickHandler\` prop passed to \`${componentName}\` but buttonType \`link\` specified. Validation failed.`
       );
     }
-    if (type === "button") {
+    if (buttonType === "button") {
       return PropTypes.checkPropTypes(
         { onClickHandler: PropTypes.func.isRequired },
         { onClickHandler },
@@ -57,13 +57,13 @@ Button.propTypes = {
     }
     return null;
   },
-  to: ({ to, type }, propName, componentName) => {
-    if (type === "button" && to) {
+  to: ({ to, buttonType }, propName, componentName) => {
+    if (buttonType === "button" && to) {
       return new Error(
-        `\`to\` prop passed to \`${componentName}\` but type \`button\` specified. Validation failed.`
+        `\`to\` prop passed to \`${componentName}\` but buttonType \`button\` specified. Validation failed.`
       );
     }
-    if (type === "to") {
+    if (buttonType === "to") {
       return PropTypes.checkPropTypes(
         { to: PropTypes.string.isRequired },
         { to },

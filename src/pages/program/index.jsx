@@ -7,7 +7,6 @@ import Text from "components/atoms/text";
 
 const Program = () => {
   const { id } = useParams();
-
   const { loading, error, data } = useQuery(GET_PROGRAM_BY_ID, {
     variables: {
       id,
@@ -18,12 +17,12 @@ const Program = () => {
   const { Program: ProgramData } = data;
   return (
     <ProgramTemplate
+      description={ProgramData.description}
       difficulty={ProgramData.difficulty}
       duration={ProgramData.duration}
+      firstWorkoutID="empty"
       focus={ProgramData.focus}
       title={ProgramData.title}
-      description={ProgramData.description}
-      firstWorkoutID="empty"
       workouts={ProgramData.workouts}
     />
   );

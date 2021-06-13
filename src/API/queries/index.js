@@ -18,8 +18,8 @@ export const GET_WORKOUT_BY_ID = gql`
 `;
 
 export const GET_ALL_PROGRAMS = gql`
-  query {
-    allProgram {
+  query ($sort: [ProgramSorting!] = [{ _createdAt: DESC }]) {
+    allProgram(sort: $sort) {
       _id
       _createdAt
       title

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18.125122"
+   height="21.45825"
+   viewBox="0 0 18.125122 21.45825"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Vector 5.svg"
+   inkscape:export-filename="/home/luke/fend/fitness-app/src/assets/images/icon_sort.png"
+   inkscape:export-xdpi="138.57677"
+   inkscape:export-ydpi="138.57677"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="21.747916"
+     inkscape:cx="8.7708615"
+     inkscape:cy="13.213168"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-intersection-paths="false"
+     inkscape:snap-midpoints="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-others="true"
+     inkscape:snap-center="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-bbox="false"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="false"
+     inkscape:object-paths="false" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(-0.14649969,3.7657438)"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3"
+     transform="translate(0.26993353,10.418744)">
+    <path
+       style="fill:none;stroke:#1d2a73;stroke-width:1.49998;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0.26038945,1.9769456 H 17.324866 L 8.7926287,10.509184 Z"
+       id="path884" />
+    <path
+       style="fill:none;stroke:#1d2a73;stroke-width:1.49998;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0.26038945,-1.3561823 H 17.324866 L 8.7926287,-9.8884208 Z"
+       id="path884-7" />
+  </g>
+</svg>

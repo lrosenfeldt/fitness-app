@@ -1,7 +1,5 @@
 const path = require("path");
 
-console.log(__dirname);
-
 module.exports = {
   webpack: {
     alias: {
@@ -10,7 +8,15 @@ module.exports = {
       "@organisms": path.resolve(__dirname, "src/components/organisms"),
       "@templates": path.resolve(__dirname, "src/templates"),
       "@pages": path.resolve(__dirname, "src/pages"),
-      "@utils": path.resolve(__dirname, "src/utils")
-    }
-  }
+      "@utils": path.resolve(__dirname, "src/utils"),
+    },
+  },
+  jest: {
+    configure: {
+      moduleNameMapper: {
+        "@utils/(.*)": ["<rootDir>/src/utils/$1"],
+      },
+      testEnvironment: "jsdom",
+    },
+  },
 };

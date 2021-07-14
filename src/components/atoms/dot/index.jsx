@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { cssSizeRe } from "@utils/regExp/";
 
 const Dot = styled.div`
-  background-color: ${({ color, theme }) => color || theme.color.beige};
+  background-color: ${({ bgColor, theme }) => bgColor || theme.color.beige};
   border-radius: 50%;
   height: ${({ size, theme }) => size || theme.fontSize.small};
   width: ${({ size, theme }) => size || theme.fontSize.small};
 `;
 
 Dot.propTypes = {
-  color: PropTypes.string,
+  bgColor: PropTypes.string,
   size: ({ size }) => {
     if (!size) {
       return null;

@@ -15,11 +15,13 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "jest", "testing-library"],
+  "plugins": [
+    "react", "prettier", "jest", "jest-dom", "testing-library"
+  ],
   "overrides": [
     { 
       "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      "extends": ["plugin:testing-library/react", "plugin:jest-dom/recommended"]
+      "extends": ["plugin:testing-library/react", "plugin:jest-dom/recommended", "plugin:jest/recommended", "plugin:jest/style"]
     }
   ],
   "rules": {

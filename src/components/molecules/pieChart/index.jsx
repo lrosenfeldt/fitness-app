@@ -37,7 +37,7 @@ const PieChart = ({ workouts }) => {
       <StyledUl>
         {data.map((dataset, index) => (
           <StyledLi key={pieChartColors[index]}>
-            <Dot color={pieChartColors[index]} />
+            <Dot bgColor={pieChartColors[index]} />
             {dataset.title}
           </StyledLi>
         ))}

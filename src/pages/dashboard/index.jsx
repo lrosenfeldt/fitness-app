@@ -1,8 +1,8 @@
 import { useQuery } from "@apollo/client";
-import { GET_WORKOUT_BY_ID } from "API/queries";
-import DashboardTemplate from "templates/dashboard/index";
-import Spinner from "components/atoms/spinner";
-import Text from "components/atoms/text";
+import { GET_WORKOUT_BY_ID } from "@utils/queries";
+import DashboardTemplate from "@templates/dashboard/index";
+import Spinner from "@atoms/spinner";
+import Text from "@atoms/text";
 
 const Dashboard = () => {
   const id = "1a985d3f-73d5-414c-abac-bee46d5a6a32";

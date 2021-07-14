@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import * as translate from "API/translateTags";
-import Text from "components/atoms/text";
+import * as translate from "@utils/translateTags";
+import Text from "@atoms/text";
 
 const WorkoutParameterLabel = ({
   calories = "XXX",

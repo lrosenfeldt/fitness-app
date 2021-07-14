@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Navbar from "components/organisms/navbar";
+import Navbar from "@organisms/navbar";
 
 const PageWrapper = styled.div`
   padding-bottom: ${({ theme, noNav }) => (noNav && 0) || theme.navHeight};

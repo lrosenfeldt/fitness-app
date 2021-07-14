@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import H2 from "components/atoms/h2";
-import FavButton from "components/atoms/favButton";
-import Text from "components/atoms/text";
+import H2 from "@atoms/h2";
+import FavButton from "@atoms/favButton";
+import Text from "@atoms/text";
 
 const Wrapper = styled.div`
   border-radius: 5px;

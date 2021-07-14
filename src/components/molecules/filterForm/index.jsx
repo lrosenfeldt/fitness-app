@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { useEffect, useReducer, useRef } from "react";
-import H3 from "components/atoms/h3";
-import RadioGroup from "components/atoms/radioGroup";
+import H3 from "@atoms/h3";
+import RadioGroup from "@atoms/radioGroup";
 import iconSort from "assets/images/icon_sort.png";
 
 const StyledForm = styled.form`

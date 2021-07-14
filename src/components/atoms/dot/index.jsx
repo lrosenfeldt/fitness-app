@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { cssSizeRe } from "API/regExp/";
+import { cssSizeRe } from "@utils/regExp/";
 
 const Dot = styled.div`
   background-color: ${({ color, theme }) => color || theme.color.beige};

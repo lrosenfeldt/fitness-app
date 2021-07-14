@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import WorkoutParameterLabel from "components/atoms/workoutParameterLabel";
-import FavButton from "components/atoms/favButton";
-import Text from "components/atoms/text";
+import WorkoutParameterLabel from "@atoms/workoutParameterLabel";
+import FavButton from "@atoms/favButton";
+import Text from "@atoms/text";
 
 const StyledLi = styled.li`
   background-color: white;

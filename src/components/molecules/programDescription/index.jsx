@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Text from "components/atoms/text";
-import Button from "components/atoms/button";
+import Text from "@atoms/text";
+import Button from "@atoms/button";
 
 const StyledSection = styled.section`
   align-items: center;

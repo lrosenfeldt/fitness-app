@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import PageWrapper from "templates/page";
-import BrowsePrograms from "components/organisms/browePrograms";
-import H2 from "components/atoms/h2";
+import PageWrapper from "@templates/page";
+import BrowsePrograms from "@organisms/browePrograms";
+import H2 from "@atoms/h2";
 
 const ContentWrapper = styled(PageWrapper)`
   padding-left: ${({ theme }) => theme.contentPadding};

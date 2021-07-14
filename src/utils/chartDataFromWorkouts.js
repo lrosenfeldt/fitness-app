@@ -1,4 +1,4 @@
-import * as translate from "API/translateTags";
+import * as translate from "@utils/translateTags";
 
 function chartDataFromWorkouts(workouts, colors) {
   const dataWrapper = new Map();

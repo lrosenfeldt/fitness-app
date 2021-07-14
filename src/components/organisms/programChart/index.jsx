@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import H3 from "components/atoms/h3";
-import PieChart from "components/molecules/pieChart";
+import H3 from "@atoms/h3";
+import PieChart from "@molecules/pieChart";
 
 const StyledSection = styled.section`
   padding: 30px ${({ theme }) => theme.contentPadding};

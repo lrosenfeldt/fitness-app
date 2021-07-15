@@ -1,0 +1,16 @@
+name: tests
+on: 
+  push:
+    paths-ignore:
+    - ".github"
+    # branches:
+    # - main
+jobs: 
+  test-all:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    - run: npm install yarn
+    - run: yarn install
+    - run: yarn test

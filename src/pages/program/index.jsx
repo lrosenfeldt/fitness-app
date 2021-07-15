@@ -1,9 +1,9 @@
-import ProgramTemplate from "templates/program";
+import ProgramTemplate from "@templates/program";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { GET_PROGRAM_BY_ID } from "API/queries";
-import Spinner from "components/atoms/spinner";
-import Text from "components/atoms/text";
+import { GET_PROGRAM_BY_ID } from "@utils/queries";
+import Spinner from "@atoms/spinner";
+import Text from "@atoms/text";
 
 const Program = () => {
   const { id } = useParams();

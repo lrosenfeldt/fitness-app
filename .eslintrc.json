@@ -4,9 +4,9 @@
     "es2021": true
   },
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -15,7 +15,15 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": [
+    "react", "prettier", "jest", "jest-dom", "testing-library"
+  ],
+  "overrides": [
+    { 
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react", "plugin:jest-dom/recommended", "plugin:jest/recommended", "plugin:jest/style"]
+    }
+  ],
   "rules": {
       "import/no-unresolved": "off",
       "no-underscore-dangle": "off",

@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from "styled-components";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import heartIcon from "assets/images/icon_fav.svg";
-import filledHeartIcon from "assets/images/icon_fav-filled.svg";
+import heartIcon from "@assets/images/icon_fav.svg";
+import filledHeartIcon from "@assets/images/icon_fav-filled.svg";
 
 const pulse = keyframes`
   0% {

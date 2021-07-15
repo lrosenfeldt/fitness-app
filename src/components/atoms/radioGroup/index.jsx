@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import randomId from "API/randomId";
+import randomId from "@utils/randomId";
 
 const RadioGroupWrapper = styled.div`
   display: flex;

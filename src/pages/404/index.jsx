@@ -1,4 +1,4 @@
-import PageNotFoundTemplate from "templates/pageNotFound";
+import PageNotFoundTemplate from "@templates/pageNotFound";
 
 const PageNotFound = () => <PageNotFoundTemplate message="Sorry!" />;
 

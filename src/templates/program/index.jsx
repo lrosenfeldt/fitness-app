@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
-import ProgramDescription from "components/molecules/programDescription";
-import ProgramHeader from "components/molecules/programHeader";
-import PageWraper from "templates/page";
-import ProgramChart from "components/organisms/programChart";
-import WorkoutListing from "components/organisms/workoutListing/";
+import ProgramDescription from "@molecules/programDescription";
+import ProgramHeader from "@molecules/programHeader";
+import PageWraper from "@templates/page";
+import ProgramChart from "@organisms/programChart";
+import WorkoutListing from "@organisms/workoutListing/";
 
 const Program = ({
   description,

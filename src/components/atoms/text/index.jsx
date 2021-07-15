@@ -10,9 +10,7 @@ const StyledP = styled.p`
   ${({ small }) =>
     small &&
     css`
-      color: ${({ theme }) => theme.color.navy};
       font-size: ${({ theme }) => theme.fontSize.small};
-      font-weight: ${({ theme }) => theme.fontWeight.normal};
       line-height: ${({ theme }) => theme.lineHeight.small};
     `}
 `;

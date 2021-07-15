@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Dot from "components/atoms/dot";
-import ExitButton from "components/atoms/exitButton";
-import H1 from "components/atoms/h1";
-import NavLink from "components/atoms/navLink";
-import * as translate from "API/translateTags";
+import Dot from "@atoms/dot";
+import ExitButton from "@atoms/exitButton";
+import H1 from "@atoms/h1";
+import NavLink from "@atoms/navLink";
+import * as translate from "@utils/translateTags";
 
 const HeaderWrapper = styled.section`
   height: 75vh;

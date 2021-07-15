@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import ProgramCard from "components/molecules/programCard";
-import isOlderThan from "API/isOlderThan";
-import FilterForm from "components/molecules/filterForm";
+import ProgramCard from "@molecules/programCard";
+import isOlderThan from "@utils/isOlderThan";
+import FilterForm from "@molecules/filterForm";
 
 const ListingWrapper = styled.ul`
   display: grid;

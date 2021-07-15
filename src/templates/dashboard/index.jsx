@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import PageWrapper from "templates/page";
-import Greeter from "components/molecules/greeter";
-import DailyWorkoutPreview from "components/organisms/dailyWorkoutPreview";
+import PageWrapper from "@templates/page";
+import Greeter from "@molecules/greeter";
+import DailyWorkoutPreview from "@organisms/dailyWorkoutPreview";
 
 const ContentWrapper = styled(PageWrapper)`
   padding-left: ${({ theme }) => theme.contentPadding};

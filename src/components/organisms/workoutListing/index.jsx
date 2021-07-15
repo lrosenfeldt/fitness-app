@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import H3 from "components/atoms/h3";
-import WorkoutCard from "components/molecules/workoutCard";
+import H3 from "@atoms/h3";
+import WorkoutCard from "@molecules/workoutCard";
 
 const SectionWrapper = styled.section`
   background-color: ${({ theme }) => theme.color.beige};

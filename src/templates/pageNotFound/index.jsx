@@ -1,11 +1,11 @@
 import styled, { keyframes } from "styled-components";
 import PropTypes from "prop-types";
-import H1 from "components/atoms/h1";
-import H2 from "components/atoms/h2";
-import Text from "components/atoms/text";
-import Button from "components/atoms/button";
-import ExitButton from "components/atoms/exitButton";
-import PageWrapper from "templates/page";
+import H1 from "@atoms/h1";
+import H2 from "@atoms/h2";
+import Text from "@atoms/text";
+import Button from "@atoms/button";
+import ExitButton from "@atoms/exitButton";
+import PageWrapper from "@templates/page";
 
 const ContentWrapper = styled(PageWrapper)`
   text-align: center;

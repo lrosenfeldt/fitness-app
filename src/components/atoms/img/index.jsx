@@ -9,7 +9,7 @@ const Img = styled.img`
 Img.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  portrait: PropTypes.bool.isRequired,
+  portrait: PropTypes.bool,
 };
 
 export default Img;

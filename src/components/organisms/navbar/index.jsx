@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import NavElement from "components/molecules/navElement";
+import NavElement from "@molecules/navElement";
 
 const StyledNav = styled.nav`
   background-color: ${({ theme }) => theme.color.beige};

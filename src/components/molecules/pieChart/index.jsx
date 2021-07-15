@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { PieChart as PieChartMinimal } from "react-minimal-pie-chart";
-import chartDataFromWorkouts from "API/chartDataFromWorkouts";
-import Text from "components/atoms/text";
-import Dot from "components/atoms/dot";
+import chartDataFromWorkouts from "@utils/chartDataFromWorkouts";
+import Text from "@atoms/text";
+import Dot from "@atoms/dot";
 
 const StyledSection = styled.div`
   display: grid;
@@ -37,7 +37,7 @@ const PieChart = ({ workouts }) => {
       <StyledUl>
         {data.map((dataset, index) => (
           <StyledLi key={pieChartColors[index]}>
-            <Dot color={pieChartColors[index]} />
+            <Dot bgColor={pieChartColors[index]} />
             {dataset.title}
           </StyledLi>
         ))}

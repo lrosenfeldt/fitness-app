@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import generateGreeting from "API/generateGreeting";
-import H1 from "components/atoms/h1";
+import generateGreeting from "@utils/generateGreeting";
+import H1 from "@atoms/h1";
 
 const StyledH1 = styled(H1)`
   white-space: pre;

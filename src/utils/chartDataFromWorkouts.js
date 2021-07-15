@@ -17,7 +17,7 @@ function chartDataFromWorkouts(workouts, colors) {
   let index = 0;
   dataWrapper.forEach((value, category) => {
     index = data.push({
-      title: translate.workoutCategory(category),
+      title: translate.workoutCategories(category),
       value,
       color: colors[index],
     });

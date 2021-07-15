@@ -5,7 +5,7 @@ import Theme from "theme/Theme";
 
 import H1 from ".";
 
-describe("H1 Component", () => {
+describe("H1 Atom", () => {
   it("should render correctly", () => {
     const innerText = "Hello World";
 

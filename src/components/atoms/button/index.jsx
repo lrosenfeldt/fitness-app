@@ -16,6 +16,7 @@ const StyledNavLink = styled(NavLink)`
 
 const StyledButton = styled(StyledNavLink).attrs({
   as: "button",
+  type: "button",
 })`
   display: block;
 `;

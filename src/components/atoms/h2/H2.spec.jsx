@@ -5,7 +5,7 @@ import Theme from "theme/Theme";
 
 import H2 from ".";
 
-describe("H2 Component", () => {
+describe("H2 Atom", () => {
   it("should render correctly", () => {
     const innerText = "Hello World";
 

@@ -12,19 +12,19 @@ const WorkoutParameterLabel = ({
     <Text className={className}>
       {calories} kcal ·{" "}
       {(duration && `${duration} Min.`) || "So schnell du kannst"} ·{" "}
-      {translate.workoutCategoryArray(categories)}
+      {translate.workoutCategories(categories)}
     </Text>
   );
 };
 
 WorkoutParameterLabel.propTypes = {
-  calories: PropTypes.number,
+  calories: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   categories: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
   className: PropTypes.string,
-  duration: PropTypes.number,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default WorkoutParameterLabel;

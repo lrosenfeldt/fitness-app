@@ -28,11 +28,11 @@ const categoryDict = {
   strength: "Kraft",
 };
 
-export function workoutCategory(categoryKey) {
+function workoutCategory(categoryKey) {
   return translate(categoryDict, categoryKey, "-");
 }
 
-export function workoutCategoryArray(categories) {
+function workoutCategoryArray(categories) {
   const translatedArray = categories.map((key) => {
     return workoutCategory(key);
   });
@@ -40,4 +40,11 @@ export function workoutCategoryArray(categories) {
     return translatedArray.join(", ");
   }
   return translatedArray[0];
+}
+
+export function workoutCategories(categoryInput) {
+  if (Array.isArray(categoryInput)) {
+    return workoutCategoryArray(categoryInput);
+  }
+  return workoutCategory(categoryInput);
 }

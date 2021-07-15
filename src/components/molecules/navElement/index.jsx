@@ -2,9 +2,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Img from "@atoms/img";
 import NavLink from "@atoms/navLink";
-import iconHome from "assets/images/icon_home.png";
-import iconBrowse from "assets/images/icon_browse.png";
-import iconProfile from "assets/images/icon_profile.png";
+import iconHome from "@assets/images/icon_home.png";
+import iconBrowse from "@assets/images/icon_browse.png";
+import iconProfile from "@assets/images/icon_profile.png";
 
 const StyledNavLink = styled(NavLink)`
   display: grid;

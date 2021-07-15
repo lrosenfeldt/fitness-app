@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
-import backArrowIcon from "assets/images/icon_back_arrow.png";
-import xIcon from "assets/images/icon_x_close.png";
+import backArrowIcon from "@assets/images/icon_back_arrow.png";
+import xIcon from "@assets/images/icon_x_close.png";
 
 const StyledButton = styled.button.attrs({ type: "button" })`
   background-size: contain;

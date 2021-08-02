@@ -18,6 +18,7 @@ export function programDifficulty(difficultyKey) {
 
 const programFocusDict = {
   strength: "Kraft",
+  cardio: "Cardio",
 };
 
 export function programFocus(focusKey) {
@@ -26,6 +27,7 @@ export function programFocus(focusKey) {
 
 const categoryDict = {
   strength: "Kraft",
+  cardio: "Cardio",
 };
 
 function workoutCategory(categoryKey) {

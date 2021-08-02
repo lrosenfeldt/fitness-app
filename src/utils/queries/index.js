@@ -36,6 +36,7 @@ export const GET_PROGRAM_BY_ID = gql`
       focus
       title
       workouts {
+        day
         Workout {
           calories
           categories

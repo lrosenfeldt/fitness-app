@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import ProgramDescription from "@molecules/programDescription";
 import ProgramHeader from "@molecules/programHeader";
-import PageWraper from "@templates/page";
+import PageWrapper from "@templates/page";
 import ProgramChart from "@organisms/programChart";
 import WorkoutListing from "@organisms/workoutListing/";
 
@@ -16,7 +16,7 @@ const Program = ({
 }) => {
   const firstWorkoutID = workouts[0].Workout._id;
   return (
-    <PageWraper>
+    <PageWrapper>
       <ProgramHeader
         difficulty={difficulty}
         duration={duration}
@@ -29,7 +29,7 @@ const Program = ({
       />
       <ProgramChart workouts={workouts} />
       <WorkoutListing workouts={workouts} />
-    </PageWraper>
+    </PageWrapper>
   );
 };
 

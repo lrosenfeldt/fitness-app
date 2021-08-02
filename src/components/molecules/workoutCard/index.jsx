@@ -16,11 +16,12 @@ const NavLinkWrapper = styled(NavLink)`
   padding-bottom: 30px;
 `;
 
-const WorkoutCard = ({ className, Workout }) => {
+const WorkoutCard = ({ className, WorkoutWithDay }) => {
+  const { Workout, day } = WorkoutWithDay;
   return (
     <StyledLi className={className}>
-      <NavLinkWrapper to="/">
-        <Text>Tag 1</Text>
+      <NavLinkWrapper to="/program/day1/1">
+        <Text>Tag {day}</Text>
         <WorkoutParameterLabel
           calories={Workout.calories}
           categories={Workout.categories}
@@ -34,13 +35,17 @@ const WorkoutCard = ({ className, Workout }) => {
 
 WorkoutCard.propTypes = {
   className: PropTypes.string,
-  Workout: PropTypes.shape({
-    calories: PropTypes.number,
-    categories: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
-    ]).isRequired,
-    duration: PropTypes.number,
+  WorkoutWithDay: PropTypes.shape({
+    day: PropTypes.number,
+    Workout: PropTypes.shape({
+      calories: PropTypes.number,
+      categories: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+      ]).isRequired,
+      day: PropTypes.number,
+      duration: PropTypes.number,
+    }).isRequired,
   }).isRequired,
 };
 

@@ -8,6 +8,11 @@ import * as translate from "@utils/translateTags";
 
 const HeaderWrapper = styled.section`
   height: 75vh;
+
+  @media screen and (min-width: 415px) {
+    height: ${({ theme }) => `calc(75% + ${theme.navHeight})`};
+  }
+
   display: grid;
   justify-items: center;
   ${({ theme }) => theme.gradient.yellowToPink};

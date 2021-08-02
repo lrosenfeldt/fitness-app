@@ -10,6 +10,7 @@ const H2 = styled.h2`
 
 H2.propTypes = {
   children: PropTypes.string.isRequired,
+  className: PropTypes.string,
   lang: PropTypes.oneOf(["de", "en"]),
 };
 

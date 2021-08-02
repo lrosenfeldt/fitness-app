@@ -49,13 +49,17 @@ const NewTag = styled(Text).attrs({
   display: block;
 `;
 
+const StyledH2 = styled(H2)`
+  text-align: center;
+`;
+
 const ProgramCard = ({ id, isFav, isNew, isHighlight, title }) => {
   return (
     <Wrapper isHighlight={isHighlight} key={id}>
       <StyledFavButton isFav={isFav} />
       {isNew && <NewTag />}
       <NavLinkWrapper to={`/program/${id}`}>
-        <H2>{title}</H2>
+        <StyledH2>{title}</StyledH2>
       </NavLinkWrapper>
     </Wrapper>
   );

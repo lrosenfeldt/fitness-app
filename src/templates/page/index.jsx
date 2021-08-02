@@ -5,10 +5,12 @@ import Navbar from "@organisms/navbar";
 const PageWrapper = styled.div`
   padding-bottom: ${({ theme, noNav }) => (noNav && 0) || theme.navHeight};
   width: 100%;
+  height: 100%;
+  overflow-x: auto;
 `;
 
 const StyledNavbar = styled(Navbar)`
-  position: fixed;
+  align-self: end;
   bottom: 0;
   left: 0;
 `;
@@ -22,10 +24,10 @@ const Page = ({ className, children, noNav = false }) => {
     );
   }
   return (
-    <PageWrapper className={className}>
-      {children}
+    <>
+      <PageWrapper className={className}>{children}</PageWrapper>
       <StyledNavbar />
-    </PageWrapper>
+    </>
   );
 };
 

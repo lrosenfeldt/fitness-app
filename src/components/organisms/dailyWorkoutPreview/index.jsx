@@ -25,7 +25,11 @@ const DailyWorkoutPreview = ({ workout }) => {
       </HeadingWrapper>
       <StyledImg
         src={workout.image.asset.url}
-        alt={workout.image.asset.altText}
+        altText={
+          "altText" in workout.image.asset
+            ? workout.image.asset.altText
+            : workout.title
+        }
       />
       <Text>{workout.title}</Text>
       <Text>Titel des Programms</Text>
@@ -49,7 +53,7 @@ DailyWorkoutPreview.propTypes = {
     image: PropTypes.shape({
       asset: PropTypes.shape({
         url: PropTypes.string.isRequired,
-        altText: PropTypes.string.isRequired,
+        altText: PropTypes.string,
       }),
     }),
     title: PropTypes.string.isRequired,

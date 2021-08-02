@@ -5,8 +5,8 @@ import Spinner from "@atoms/spinner";
 import Text from "@atoms/text";
 
 const Dashboard = () => {
-  const id = "1a985d3f-73d5-414c-abac-bee46d5a6a32";
-  const userName = "Lukas";
+  const id = "7c6b9143-47e7-44e3-b0c0-ae009653dbbf";
+  const userName = "Bo";
   const { loading, error, data } = useQuery(GET_WORKOUT_BY_ID, {
     variables: {
       id,

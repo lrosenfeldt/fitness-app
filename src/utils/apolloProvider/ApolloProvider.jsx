@@ -5,8 +5,7 @@ import {
 } from "@apollo/client";
 
 const client = new ApolloClient({
-  // uri: "https://lldcxvcf.api.sanity.io/v1/graphql/production/default",
-  uri: "https://e24aqc8d.api.sanity.io/v1/graphql/production/default",
+  uri: process.env.REACT_APP_SANITY_URI,
   cache: new InMemoryCache(),
 });
 

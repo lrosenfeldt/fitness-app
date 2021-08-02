@@ -23,7 +23,7 @@ const StyledButton = styled(Button).attrs({
 const ProgramDescription = ({ description }) => {
   return (
     <StyledSection>
-      <StyledButton to="/program/day1/1" type="link" />
+      <StyledButton to="/program/day1/1" buttonType="link" />
       <Text>{description}</Text>
     </StyledSection>
   );

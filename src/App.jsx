@@ -5,9 +5,10 @@ import {
   Switch,
 } from "react-router-dom";
 import Dashboard from "@pages/dashboard";
-import Browse from "@pages/browse/Browse";
+import Browse from "@pages/browse";
 import Program from "@pages/program";
 import PageNotFound from "@pages/404";
+import Workout from "@pages/workout";
 
 function App() {
   return (
@@ -21,11 +22,15 @@ function App() {
           <Dashboard />
         </Route>
 
-        <Route path="/browse">
+        <Route exact path="/browse">
           <Browse />
         </Route>
 
-        <Route path="/program/:id">
+        <Route exact path="/program/day1/:id">
+          <Workout />
+        </Route>
+
+        <Route exact path="/program/:id">
           <Program />
         </Route>
 

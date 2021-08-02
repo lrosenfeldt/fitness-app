@@ -63,6 +63,8 @@ const StyledButton = styled(Button).attrs({
   children: "Bring mich nach Hause!",
 })`
   grid-area: button;
+  align-self: center;
+  justify-self: center;
 `;
 
 const PageNotFound = ({ message }) => {

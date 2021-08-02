@@ -61,8 +61,26 @@ const GlobalStyles = createGlobalStyle`
   }
   
   #root {
+    position: relative;
     width: 100vw;
     min-height: 100vh;
+    max-width: 414px;
+    display: grid;
+    align-content: space-between;
+    align-items: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    overflow: hidden;
+
+    @media screen and (min-width: 415px) {
+      border-radius: 5px;
+      box-shadow: 2px 3px 15px 8px rgba(0, 0, 0, 0.2);
+      height: 736px;
+      margin: auto;
+      margin-top: 2rem;
+      min-height: auto;
+    }
   }
 `;
 

@@ -26,8 +26,8 @@ const WorkoutListing = ({ className, workouts }) => {
       <StyledUl>
         {workouts.map((workoutWithDay) => (
           <WorkoutCard
-            Workout={workoutWithDay.Workout}
-            key={workoutWithDay.Workout._id}
+            WorkoutWithDay={workoutWithDay}
+            key={workoutWithDay.day}
             id={workoutWithDay.Workout._id}
           />
         ))}
@@ -40,6 +40,7 @@ WorkoutListing.propTypes = {
   className: PropTypes.string,
   workouts: PropTypes.arrayOf(
     PropTypes.shape({
+      day: PropTypes.number,
       Workout: PropTypes.shape({
         calories: PropTypes.number,
         categories: PropTypes.oneOfType([

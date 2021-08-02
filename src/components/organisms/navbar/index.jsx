@@ -5,7 +5,7 @@ const StyledNav = styled.nav`
   background-color: ${({ theme }) => theme.color.beige};
   height: ${({ theme }) => theme.navHeight};
   padding: 9px 39px 2px 39px;
-  width: 100vw;
+  width: 100%;
 `;
 
 const StyledUl = styled.div`

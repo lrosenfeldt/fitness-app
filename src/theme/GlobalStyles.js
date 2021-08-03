@@ -50,7 +50,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: Montserrat;
     @media screen and (min-width: ${mobileBreakpoint}) {
       background-image: linear-gradient(to top, rgb(229, 93, 135), rgb(95, 195, 228));
-      height: 100vh;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2rem;
     }
   }
 
@@ -84,8 +88,6 @@ const GlobalStyles = createGlobalStyle`
       border-radius: 15px;
       box-shadow: 2px 3px 15px 8px rgba(0, 0, 0, 0.2);
       height: 736px;
-      margin: auto;
-      margin-top: 2rem;
       min-height: auto;
     }
   }

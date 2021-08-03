@@ -28,7 +28,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
-    "clean": "./clean.sh"
+    "clean": "./.clean.bash"
   },
   "engines": {
     "node": ">=14.17.1"

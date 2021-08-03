@@ -44,20 +44,20 @@ run() {
     "build"
   )
   while getopts :hf opt; do
-    echo "opt: $opt"
     case $opt in
     h)
       display_help
       return 0 ;;
     f)
       targets+=("node_modules")
-      cleanup "${targets[@]}"
       return 0 ;;
     ?)
       echo "ERROR: Unknown option -$OPTARG"
       return 1 
     esac
   done
+
+  cleanup "${targets[@]}"
 }
 
 run "${ARGS[@]}"

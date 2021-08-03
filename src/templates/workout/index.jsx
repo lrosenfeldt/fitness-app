@@ -28,7 +28,7 @@ const Workout = ({ alt, src }) => {
       <StyledDiv>
         <Img src={src} alt={alt} />
       </StyledDiv>
-      <CenteredText>Hier gibt es nichts zu sehen... oder?</CenteredText>
+      <CenteredText>Hier gibt es nichts zu sehen...</CenteredText>
     </PageWrapper>
   );
 };

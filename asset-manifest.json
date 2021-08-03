@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/fitness-app/static/js/main.0ec8f4bb.chunk.js",
+    "main.js.map": "/fitness-app/static/js/main.0ec8f4bb.chunk.js.map",
+    "runtime-main.js": "/fitness-app/static/js/runtime-main.b386118e.js",
+    "runtime-main.js.map": "/fitness-app/static/js/runtime-main.b386118e.js.map",
+    "static/js/2.f9711fd7.chunk.js": "/fitness-app/static/js/2.f9711fd7.chunk.js",
+    "static/js/2.f9711fd7.chunk.js.map": "/fitness-app/static/js/2.f9711fd7.chunk.js.map",
+    "static/js/3.30561140.chunk.js": "/fitness-app/static/js/3.30561140.chunk.js",
+    "static/js/3.30561140.chunk.js.map": "/fitness-app/static/js/3.30561140.chunk.js.map",
+    "index.html": "/fitness-app/index.html",
+    "static/js/2.f9711fd7.chunk.js.LICENSE.txt": "/fitness-app/static/js/2.f9711fd7.chunk.js.LICENSE.txt",
+    "static/media/Montserrat-Bold.079ca05d.ttf": "/fitness-app/static/media/Montserrat-Bold.079ca05d.ttf",
+    "static/media/Montserrat-BoldItalic.a32ae5d9.ttf": "/fitness-app/static/media/Montserrat-BoldItalic.a32ae5d9.ttf",
+    "static/media/Montserrat-Italic.e7728c27.ttf": "/fitness-app/static/media/Montserrat-Italic.e7728c27.ttf",
+    "static/media/Montserrat-Regular.3cd78665.ttf": "/fitness-app/static/media/Montserrat-Regular.3cd78665.ttf",
+    "static/media/icon_fav-filled.83027721.svg": "/fitness-app/static/media/icon_fav-filled.83027721.svg",
+    "static/media/icon_fav.bf2c229a.svg": "/fitness-app/static/media/icon_fav.bf2c229a.svg",
+    "static/media/tenor.56027a79.gif": "/fitness-app/static/media/tenor.56027a79.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b386118e.js",
+    "static/js/2.f9711fd7.chunk.js",
+    "static/js/main.0ec8f4bb.chunk.js"
+  ]
+}

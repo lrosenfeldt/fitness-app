@@ -2,6 +2,8 @@
 
 Eine `react` basierte Fitness-App.
 
+Preview in GitHub-Pages: [lrosenfeldt.github.io/fitness-app](https://lrosenfeldt.github.io/fitness-app/)
+
 ## Development Tutorials
 
 ### Repo klonen

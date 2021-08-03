@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/fitness-app/static/js/main.37aa0a2b.chunk.js",
-    "main.js.map": "/fitness-app/static/js/main.37aa0a2b.chunk.js.map",
+    "main.js": "/fitness-app/static/js/main.4214752a.chunk.js",
+    "main.js.map": "/fitness-app/static/js/main.4214752a.chunk.js.map",
     "runtime-main.js": "/fitness-app/static/js/runtime-main.b386118e.js",
     "runtime-main.js.map": "/fitness-app/static/js/runtime-main.b386118e.js.map",
     "static/js/2.f9711fd7.chunk.js": "/fitness-app/static/js/2.f9711fd7.chunk.js",
@@ -21,6 +21,6 @@
   "entrypoints": [
     "static/js/runtime-main.b386118e.js",
     "static/js/2.f9711fd7.chunk.js",
-    "static/js/main.37aa0a2b.chunk.js"
+    "static/js/main.4214752a.chunk.js"
   ]
 }

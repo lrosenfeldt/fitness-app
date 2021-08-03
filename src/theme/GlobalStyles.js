@@ -6,6 +6,8 @@ import MontserratBoldItalic from "@assets/fonts/Montserrat/Montserrat-BoldItalic
 import MontserratItalic from "@assets/fonts/Montserrat/Montserrat-Italic.ttf";
 import MontserratRegular from "@assets/fonts/Montserrat/Montserrat-Regular.ttf";
 
+const mobileBreakpoint = "415px";
+
 const GlobalStyles = createGlobalStyle`
     @font-face {
     font-family: "Montserrat";
@@ -46,6 +48,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: Montserrat;
+    @media screen and (min-width: ${mobileBreakpoint}) {
+      background-image: linear-gradient(to top, rgb(229, 93, 135), rgb(95, 195, 228));
+      height: 100vh;
+    }
   }
 
   img {
@@ -61,20 +67,21 @@ const GlobalStyles = createGlobalStyle`
   }
   
   #root {
-    position: relative;
-    width: 100vw;
-    min-height: 100vh;
-    max-width: 414px;
-    display: grid;
     align-content: space-between;
     align-items: start;
+    background-color: white;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     justify-content: center;
+    max-width: 414px;
+    min-height: 100vh;
     overflow: hidden;
+    position: relative;
+    width: 100vw;
 
-    @media screen and (min-width: 415px) {
-      border-radius: 5px;
+    @media screen and (min-width: ${mobileBreakpoint}) {
+      border-radius: 15px;
       box-shadow: 2px 3px 15px 8px rgba(0, 0, 0, 0.2);
       height: 736px;
       margin: auto;

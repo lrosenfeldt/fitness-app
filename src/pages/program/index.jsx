@@ -15,7 +15,6 @@ const Program = () => {
   if (loading) return <Spinner />;
   if (error) return <Text>Da ist wohl etwas schiefgelaufen.</Text>;
   const { Program: ProgramData } = data;
-  console.log(ProgramData);
   return (
     <ProgramTemplate
       description={ProgramData.description}
